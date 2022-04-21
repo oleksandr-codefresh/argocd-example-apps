@@ -24,7 +24,7 @@ spec:
                 restartPolicy: Never
             backoffLimit: 0
     - name: random-fail
-      count: 2
+      count: 1
       interval: 5s
       failureLimit: 1
       provider:
