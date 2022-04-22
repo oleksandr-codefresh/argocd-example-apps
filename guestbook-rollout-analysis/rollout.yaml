@@ -1,25 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: guestbook-rollout-analysis-roll
+  name: express
 spec:
   replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: guestbook-rollout-analysis
+      app: express
   template:
     metadata:
       labels:
-        app: guestbook-rollout-analysis
+        app: express
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-          name: guestbook-rollout-analysis
+        # - image: quay.io/jesse_antoszyk/nginx:latest
+        # - image: codefreshjesse/express-microservice2:ba63f092d0aebc502e66aef41ac56bf47b751844
+        # 0.1 0.2
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          name: express
           ports:
-            - name: http
-              containerPort: 8080
-              protocol: TCP
+            - containerPort: 3000
   minReadySeconds: 30
   strategy:
     canary:
@@ -27,9 +28,7 @@ spec:
         templates:
           - templateName: pass-always
           - templateName: mixed-tests
-        startingStep: 1 # delay starting analysis run until setWeight: 40%
+        startingStep: 1
       steps:
         - setWeight: 25
-        - pause: {duration: 30s}
-        - setWeight: 50
         - pause: {duration: 30s}
