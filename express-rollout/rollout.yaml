@@ -14,7 +14,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           name: express
           ports:
             - name: http
@@ -33,6 +33,11 @@ spec:
         - analysis:
             templates:
             - templateName: mixed-tests
+        - setWeight: 75
+        - pause: {duration: 30s}
+        - analysis:
+            templates:
+            - templateName: prometheus-template
         - experiment:
             duration: 15s
             templates:
