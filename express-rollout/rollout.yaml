@@ -37,7 +37,7 @@ spec:
         - pause: {duration: 30s}
         - analysis:
             templates:
-            - templateName: prometheus-template
+            - templateName: prometheus-metric
         - experiment:
             duration: 15s
             templates:
