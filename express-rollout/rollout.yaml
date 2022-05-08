@@ -38,6 +38,9 @@ spec:
         - analysis:
             templates:
             - templateName: prometheus-template
+            args:
+            - name: service-name
+              value: guestbook-svc.default.svc.cluster.local
         - experiment:
             duration: 15s
             templates:
