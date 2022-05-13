@@ -22,7 +22,7 @@ spec:
         query: |
           sum(argocd_app_reconcile_sum)
   - name: random-fail-job
-    count: 1
+    count: 6
     interval: 5s
     failureLimit: 1
     provider:
