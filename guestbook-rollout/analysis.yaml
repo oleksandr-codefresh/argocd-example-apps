@@ -21,7 +21,7 @@ spec:
                 args: [exit 0]
               restartPolicy: Never
           backoffLimit: 0
-  - name: random-roll-fail
+  - name: randfail
     count: 1
     interval: 5s
     failureLimit: 1
