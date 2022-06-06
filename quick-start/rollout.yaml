@@ -30,19 +30,5 @@ spec:
       steps:
         - setWeight: 25
         - pause: {duration: 20s}
-        - analysis:
-            templates:
-            - templateName: prometheus-analysis
         - setWeight: 75
         - pause: {duration: 15s}
-        - experiment:
-            duration: 15s
-            templates:
-            - name: canary
-              specRef: canary
-            # This experiment performs its own analysis by referencing one or more AnalysisTemplates
-            # here. The success or failure of these runs will progress or abort the rollout respectively.
-            analyses:
-            - name: random-fail-experiment
-              templateName: experiment-analysis
-              requiredForCompletion: true

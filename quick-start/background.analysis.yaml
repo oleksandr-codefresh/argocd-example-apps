@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: background-analysis
+spec:
+  metrics:
+    - name: prometheus-metric
+      count: 4
+      interval: 5s
+      successCondition: result[0] >= 100
+      failureLimit: 1
+      provider:
+        prometheus:
+          address: http://a95910c83807a4089a2458554bf5c21e-1864259807.us-east-1.elb.amazonaws.com:9090
+          query: |
+            sum(argocd_app_reconcile_sum)
+
