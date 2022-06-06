@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: guestbook-sales-rollout
+  name: codefresh-guestbook-rollout
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: guestbook-sales
+      app: codefresh-guestbook
   template:
     metadata:
       labels:
-        app: guestbook-sales
+        app: codefresh-guestbook
     spec:
       containers:
         - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-          name: guestbook-sales
+          name: codefresh-guestbook
           ports:
             - name: http
               containerPort: 8080
