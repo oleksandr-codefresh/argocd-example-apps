@@ -14,7 +14,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           name: express
           ports:
             - name: http
@@ -33,22 +33,22 @@ spec:
         - analysis:
             templates:
             - templateName: mixed-tests
-        - setWeight: 75
-        - pause: {duration: 15s}
-        - analysis:
-            templates:
-            - templateName: prometheus-template
-            args:
-            - name: service-name
-              value: guestbook-svc.default.svc.cluster.local
-        - experiment:
-            duration: 15s
-            templates:
-            - name: canary
-              specRef: canary
-            # This experiment performs its own analysis by referencing one or more AnalysisTemplates
-            # here. The success or failure of these runs will progress or abort the rollout respectively.
-            analyses:
-            - name: random-fail-experiment
-              templateName: mixed-tests-experiment
-              requiredForCompletion: true
+        # - setWeight: 75
+        # - pause: {duration: 15s}
+        # - analysis:
+        #     templates:
+        #     - templateName: prometheus-template
+        #     args:
+        #     - name: service-name
+        #       value: guestbook-svc.default.svc.cluster.local
+        # - experiment:
+        #     duration: 15s
+        #     templates:
+        #     - name: canary
+        #       specRef: canary
+        #     # This experiment performs its own analysis by referencing one or more AnalysisTemplates
+        #     # here. The success or failure of these runs will progress or abort the rollout respectively.
+        #     analyses:
+        #     - name: random-fail-experiment
+        #       templateName: mixed-tests-experiment
+        #       requiredForCompletion: true
