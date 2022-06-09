@@ -14,7 +14,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           name: express
           ports:
             - name: http
@@ -29,12 +29,12 @@ spec:
         startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - setWeight: 25
-        - pause: {duration: 30s}
+        - pause: {duration: 15s}
         - analysis:
             templates:
             - templateName: mixed-tests
         - setWeight: 75
-        - pause: {duration: 30s}
+        - pause: {duration: 15s}
         - analysis:
             templates:
             - templateName: prometheus-template

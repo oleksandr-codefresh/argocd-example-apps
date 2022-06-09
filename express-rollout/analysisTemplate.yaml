@@ -86,7 +86,7 @@ metadata:
   name: pass-always
 spec:
   metrics:
-  - name: pass-2
+  - name: pass-always-2
     count: 2
     interval: 5s
     failureLimit: 1
@@ -99,7 +99,7 @@ spec:
               - name: sleep
                 image: alpine:3.8
                 command: [sh, -c]
-                args: [exit 1]
+                args: [exit 0]
               restartPolicy: Never
           backoffLimit: 0
 
