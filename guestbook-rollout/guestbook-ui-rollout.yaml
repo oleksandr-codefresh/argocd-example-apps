@@ -6,11 +6,11 @@ spec:
   replicas: 2
   revisionHistoryLimit: 2
   strategy:
-    analysis:
-      templates:
-        - templateName: mixed-roll-tests
-      startingStep: 1
     canary:
+      analysis:
+        templates:
+          - templateName: mixed-roll-tests
+        startingStep: 1
       steps:
         - pause: {duration: 10s}
         - setWeight: 50
