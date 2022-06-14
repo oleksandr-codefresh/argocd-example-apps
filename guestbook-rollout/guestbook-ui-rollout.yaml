@@ -4,17 +4,17 @@ metadata:
   name: rollout-test-3
 spec:
   replicas: 2
+  revisionHistoryLimit: 2
   strategy:
+    analysis:
+      templates:
+        - templateName: mixed-roll-tests
+      startingStep: 1
     canary:
       steps:
+        - pause: {duration: 10s}
         - setWeight: 50
-        - pause: {duration: 10}
-        - analysis:
-            templates:
-            - templateName: mixed-roll-tests
-        - setWeight: 80
-        - pause: {duration: 10}
-  revisionHistoryLimit: 2
+        - pause: {duration: 10s}
   selector:
     matchLabels:
       app: guestbook-ui
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: guestbook-ui
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          image: xeonalex/guesbook:0.1
           ports:
             - name: http
               containerPort: 8080
