@@ -7,6 +7,11 @@ spec:
   revisionHistoryLimit: 2
   strategy:
     canary:
+      stableService: express-active
+      canaryService: express-preview
+      trafficRouting:
+        nginx:
+          stableIngress: express-stable-ingress
       analysis:
         templates:
           - templateName: mixed-roll-tests
@@ -25,11 +30,9 @@ spec:
     spec:
       containers:
         - name: guestbook-ui
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.3
           ports:
-            - name: http
-              containerPort: 8080
-              protocol: TCP
+            - containerPort: 3000
           resources:
             requests:
               memory: 32Mi
