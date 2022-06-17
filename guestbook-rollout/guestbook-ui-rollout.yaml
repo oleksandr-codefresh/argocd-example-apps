@@ -22,15 +22,15 @@ spec:
         - pause: {duration: 10s}
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: express-microservice
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: express-microservice
     spec:
       containers:
-        - name: guestbook-ui
-          image: xeonalex/guesbook:0.1
+        - name: express-microservice
+          image: xeonalex/guesbook:0.2
           ports:
             - containerPort: 3000
           resources:
