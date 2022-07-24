@@ -10,12 +10,8 @@ spec:
       stableService: express-active
       canaryService: express-preview
       trafficRouting:
-        nginx:
-          stableIngress: express-stable-ingress
-      analysis:
-        templates:
-          - templateName: mixed-roll-tests
-        startingStep: 1
+        smi:
+          {}
       steps:
         - pause: {duration: 15s}
         - setWeight: 50
@@ -30,7 +26,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3000
           resources:
