@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
+  strategy
+    type: RollingUpdate
   replicas: 3
   revisionHistoryLimit: 3
   selector:
