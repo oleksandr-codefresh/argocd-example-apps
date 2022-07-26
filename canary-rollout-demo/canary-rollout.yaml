@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: canary-demo
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.3
           imagePullPolicy: Always
           ports:
             - name: http
@@ -30,6 +30,6 @@ spec:
       canaryService: canary-demo-preview
       steps:
         - setWeight: 20
-        - pause: {duration: 50}
+        - pause: {duration: 20}
         - setWeight: 60
-        - pause: {duration: 50}
+        - pause: {duration: 20}
