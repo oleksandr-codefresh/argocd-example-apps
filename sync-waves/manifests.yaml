@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: nginx:latest
+          image: nginx:latest-non-exist
 ---
 apiVersion: v1
 kind: Service
