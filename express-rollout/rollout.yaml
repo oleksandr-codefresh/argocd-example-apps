@@ -14,7 +14,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.3
           name: express
           ports:
             - name: http
@@ -29,7 +29,7 @@ spec:
         startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - setWeight: 55
-        - pause: {duration: 90s}
+        - pause: {duration: 15s}
         - analysis:
             templates:
             - templateName: mixed-tests
