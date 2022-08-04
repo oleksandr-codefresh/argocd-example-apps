@@ -87,7 +87,7 @@ metadata:
 spec:
   metrics:
   - name: pass-always-2
-    count: 3
+    count: 2
     interval: 5s
     failureLimit: 1
     provider:
