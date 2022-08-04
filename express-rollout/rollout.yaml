@@ -5,7 +5,7 @@ metadata:
   labels:
     somelb: somevaassss
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 1
   selector:
     matchLabels:
@@ -16,7 +16,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.1
           name: express
           ports:
             - name: http
