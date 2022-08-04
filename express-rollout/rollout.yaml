@@ -3,9 +3,9 @@ kind: Rollout
 metadata:
   name: express-roll
   labels:
-    somelb: somevaasdsadssss
+    somelb: somevaassss
 spec:
-  replicas: 2
+  replicas: 3
   revisionHistoryLimit: 1
   selector:
     matchLabels:
