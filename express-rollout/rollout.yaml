@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: express-roll
   labels:
-    somelb: someval
+    somelb: somevalsad
 spec:
   replicas: 2
   revisionHistoryLimit: 1
