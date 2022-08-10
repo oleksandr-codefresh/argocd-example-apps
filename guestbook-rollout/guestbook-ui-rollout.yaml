@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rollout-test-3
   labels:
-    test: sdsdsd
+    test: sdsdsdsdsds
 spec:
   replicas: 2
   strategy:
