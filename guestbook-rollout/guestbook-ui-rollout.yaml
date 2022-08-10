@@ -2,6 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout-test-3
+  labels:
+    test: sdsdsd
 spec:
   replicas: 2
   strategy:
@@ -22,7 +24,7 @@ spec:
     spec:
       containers:
         - name: guestbook-ui
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - name: http
               containerPort: 8080
