@@ -64,6 +64,7 @@ spec:
             # here. The success or failure of these runs will progress or abort the rollout respectively.
             analyses:
             - templateName: experiment-analysis
+              name: named-experiment-analysis
               requiredForCompletion: true
         - setCanaryScale:
             matchTrafficWeight: true
