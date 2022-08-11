@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: canary-demo
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           imagePullPolicy: Always
           ports:
             - name: http
@@ -29,7 +29,7 @@ spec:
     canary:
       canaryService: canary-service
       stableService: stable-service
-      # dynamicStableScale: true
+      dynamicStableScale: true # scale down stable replice during rollout or not
       trafficRouting:
         nginx:
           stableIngress: rollout-ingress
