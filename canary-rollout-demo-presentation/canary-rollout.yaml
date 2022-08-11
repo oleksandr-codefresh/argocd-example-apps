@@ -45,26 +45,26 @@ spec:
         - setWeight: 20
         - pause: { duration: 30 }
         - analysis:
-          templates:
+            templates:
             - templateName: step-analysis
         - setCanaryScale:
             replicas: 2
         - setWeight: 50
         - pause: { duration: 30 }
         - experiment:
-          duration: 40s
-          templates:
-            - name: experiment-stable
-              specRef: stable
-              weight: 10
-            - name: experiment-canary
-              specRef: canary
-              weight: 10
-          # This experiment performs its own analysis by referencing one or more AnalysisTemplates
-          # here. The success or failure of these runs will progress or abort the rollout respectively.
-          analyses:
-          - templateName: experiment-analysis
-            requiredForCompletion: true
+            duration: 40s
+            templates:
+              - name: experiment-stable
+                specRef: stable
+                weight: 10
+              - name: experiment-canary
+                specRef: canary
+                weight: 10
+            # This experiment performs its own analysis by referencing one or more AnalysisTemplates
+            # here. The success or failure of these runs will progress or abort the rollout respectively.
+            analyses:
+            - templateName: experiment-analysis
+              requiredForCompletion: true
         - setCanaryScale:
             matchTrafficWeight: true
         - setWeight: 100
