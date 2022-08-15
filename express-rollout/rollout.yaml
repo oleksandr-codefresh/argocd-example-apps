@@ -16,7 +16,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.3
           name: express
           ports:
             - name: http
@@ -40,17 +40,17 @@ spec:
             args:
             - name: service-name
               value: guestbook-svc.default.svc.cluster.local
-        - experiment:
-            duration: 15s
-            templates:
-              - name: experiment-stable
-                specRef: stable
-                weight: 5
-              - name: experiment-canary
-                specRef: canary
-                weight: 5
-            # This experiment performs its own analysis by referencing one or more AnalysisTemplates
-            # here. The success or failure of these runs will progress or abort the rollout respectively.
-            analyses:
-            - templateName: experiment-analysis
-              requiredForCompletion: true
+        # - experiment:
+        #     duration: 15s
+        #     templates:
+        #       - name: experiment-stable
+        #         specRef: stable
+        #         weight: 5
+        #       - name: experiment-canary
+        #         specRef: canary
+        #         weight: 5
+        #     # This experiment performs its own analysis by referencing one or more AnalysisTemplates
+        #     # here. The success or failure of these runs will progress or abort the rollout respectively.
+        #     analyses:
+        #     - templateName: experiment-analysis
+        #       requiredForCompletion: true
