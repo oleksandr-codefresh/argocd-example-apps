@@ -10,7 +10,7 @@ spec:
       stableService: express-active
       canaryService: express-preview
       trafficRouting:
-        ngfinx:
+        nginx:
           stableIngress: express-stable-ingress
       analysis:
         templates:
