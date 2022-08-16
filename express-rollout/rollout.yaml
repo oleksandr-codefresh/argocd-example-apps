@@ -16,7 +16,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.4
+        - image: xeonalex/guesbook:0.2
           name: express
           ports:
             - name: http
