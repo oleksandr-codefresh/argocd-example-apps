@@ -16,7 +16,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.1
+        - image: xeonalex/guesbook:0.2
           name: express
           ports:
             - name: http
@@ -34,12 +34,12 @@ spec:
         - pause: {duration: 60s}
         - setWeight: 75
         - pause: {duration: 15s}
-        - analysis:
-            templates:
-            - templateName: prometheus-template
-            args:
-            - name: service-name
-              value: guestbook-svc.default.svc.cluster.local
+        # - analysis:
+        #     templates:
+        #     - templateName: prometheus-template
+        #     args:
+        #     - name: service-name
+        #       value: guestbook-svc.default.svc.cluster.local
         # - experiment:
         #     duration: 15s
         #     templates:
