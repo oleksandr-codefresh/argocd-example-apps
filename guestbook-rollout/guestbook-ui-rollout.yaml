@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout-test-4
-  lasssbbhbhels: 
+  labeels: 
     sda: sdsd
 spec:
   replicas: 2
