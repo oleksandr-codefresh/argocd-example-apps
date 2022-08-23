@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout-test-4
-  labels: 
+  lasssbels: 
     sda: sdsd
 spec:
   replicas: 2
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.1
+          image: xeonalex/guesbook:0.2
           ports:
             - containerPort: 3000
           resources:
