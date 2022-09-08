@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: express-roll
-  labels:
+  labsssels:
     somelb: somevsrrrrskkkk
 spec:
   replicas: 2
