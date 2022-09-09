@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rollout-test-4
   labelss:
-    sds: sdsd
+    sds: sssssdsd
 spec:
   replicas: 2
   revisionHistoryLimit: 1
