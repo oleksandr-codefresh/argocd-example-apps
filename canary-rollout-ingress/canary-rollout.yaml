@@ -7,17 +7,15 @@ spec:
   revisionHistoryLimit: 1
   strategy:
     canary:
-      # analysis:
-      #   templates:
-      #     - templateName: mixed-roll-tests
-      #   startingStep: 1
       steps:
-        - pause: {duration: 20s}
+        - pause:
+            duration: 20s
         - analysis:
             templates:
-            - templateName: mixed-roll-tests
+              - templateName: mixed-roll-tests
         - setWeight: 50
-        - pause: {duration: 30s}
+        - pause:
+            duration: 30s
   selector:
     matchLabels:
       app: express-microservice
