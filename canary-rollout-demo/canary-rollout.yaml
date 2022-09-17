@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: canary-demo
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.1
           imagePullPolicy: Always
           ports:
             - name: http
