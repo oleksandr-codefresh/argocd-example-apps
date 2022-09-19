@@ -3,6 +3,7 @@ kind: Rollout
 metadata:
   name: canary-demo
 spec:
+  progressDeadlineSeconds: 240
   replicas: 2
   revisionHistoryLimit: 1
   strategy:
@@ -26,7 +27,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: idanarbel/rollouts-demo:purple
+          image: idanarbel/rollouts-demo:bluee
           ports:
             - containerPort: 3000
           resources:
