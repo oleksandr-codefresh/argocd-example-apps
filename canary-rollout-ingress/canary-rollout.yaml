@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: idanarbel/rollouts-demo:orange
+          image: idanarbel/rollouts-demo:red
           ports:
             - containerPort: 3000
           resources:
