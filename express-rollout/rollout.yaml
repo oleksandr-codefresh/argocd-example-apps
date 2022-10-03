@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: express-roll
   labels:
-    somelb: somevsrrrrskkkk
+    somelb: some
 spec:
   replicas: 2
   revisionHistoryLimit: 1
@@ -16,7 +16,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.3
+        - image: xeonalex/guesbook:0.2
           name: express
           ports:
             - name: http
