@@ -2,6 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: canary-demo
+  labels:
+    sdad: sdsd
 spec:
   progressDeadlineSeconds: 240
   replicas: 2
@@ -28,7 +30,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: idanarbel/rollouts-demo:red
+          image: idanarbel/rollouts-demo:gren
           ports:
             - containerPort: 3000
           resources:
