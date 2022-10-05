@@ -13,7 +13,6 @@ spec:
       steps:
         - pause:
             duration: 20s
-        - pause: {}
         - analysis:
             templates:
               - templateName: mixed-roll-tests
@@ -30,7 +29,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3000
           resources:
