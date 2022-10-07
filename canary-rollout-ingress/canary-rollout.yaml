@@ -5,7 +5,6 @@ metadata:
   labels:
     sdad: sdsd
 spec:
-  paused: true
   progressDeadlineSeconds: 300
   replicas: 2
   revisionHistoryLimit: 1
@@ -35,7 +34,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3000
           resources:
