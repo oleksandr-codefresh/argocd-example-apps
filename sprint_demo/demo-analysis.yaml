@@ -3,6 +3,8 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: placeholder-analysis
+  labels:
+    showDiff: 'some-text'
 spec:
   metrics:
   - name: randfail
