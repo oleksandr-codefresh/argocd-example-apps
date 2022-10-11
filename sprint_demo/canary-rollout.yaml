@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: canary-demo
+  labels:
+    sdad: sdsasdsadasd
+spec:
+  progressDeadlineSeconds: 300
+  replicas: 2
+  revisionHistoryLimit: 1
+  strategy:
+    canary:
+      steps:
+        - pause: {}
+        - setWeight: 20
+        - analysis:
+            templates:
+              - templateName: mixed-fail
+        - pause:
+            duration: 20s
+        - analysis:
+            templates:
+              - templateName: mixed-roll-tests
+        - setWeight: 50
+        - pause:
+            duration: 30s
+  selector:
+    matchLabels:
+      app: express-microservice
+  template:
+    metadata:
+      labels:
+        app: express-microservice
+    spec:
+      containers:
+        - name: express-microservice
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: 32Mi
+              cpu: 5m
