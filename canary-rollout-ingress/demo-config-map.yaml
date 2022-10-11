@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: placeholder-configmap
   labels:
-    showDiff: 'some-text'
+    showDiff: 'some-text-2'
 data:
   player_initial_lives: "3"
   ui_properties_file_name: "user-interface.properties"
