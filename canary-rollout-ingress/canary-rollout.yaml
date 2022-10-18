@@ -13,9 +13,9 @@ spec:
       steps:
         # - pause: {}
         - setWeight: 20
-        # - analysis:
-        #     templates:
-        #       - templateName: mixed-fail
+        - analysis:
+            templates:
+              - templateName: mixed-fail
         - pause:
             duration: 20s
         # - analysis:
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3000
           resources:
