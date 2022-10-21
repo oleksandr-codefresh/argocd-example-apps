@@ -10,6 +10,6 @@ spec:
       containers:
       - name: sleep-fail
         image: alpine:3.8
-        command: [sleep 9999, sh, -c]
+        command: [sh, -c, sleep 9999]
         args: [exit 0]
       restartPolicy: Never
