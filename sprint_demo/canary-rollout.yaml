@@ -11,19 +11,19 @@ spec:
   strategy:
     canary:
       steps:
-        - pause: {}
+#         - pause: {}
         - setWeight: 20
         - analysis:
             templates:
               - templateName: mixed-fail
         - pause:
-            duration: 20s
-        - analysis:
-            templates:
-              - templateName: mixed-roll-tests
-        - setWeight: 50
-        - pause:
-            duration: 30s
+#             duration: 20s
+#         - analysis:
+#             templates:
+#               - templateName: mixed-roll-tests
+#         - setWeight: 50
+#         - pause:
+#             duration: 30s
   selector:
     matchLabels:
       app: express-microservice
