@@ -16,7 +16,7 @@ spec:
         - analysis:
             templates:
               - templateName: mixed-fail
-        - pause:
+#         - pause:
 #             duration: 20s
 #         - analysis:
 #             templates:
