@@ -8,6 +8,7 @@
      argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 #     argocd.argoproj.io/sync-wave: "1"
  spec:
+   backoffLimit: 1 # number of retries
    template:
      spec:
        containers:
