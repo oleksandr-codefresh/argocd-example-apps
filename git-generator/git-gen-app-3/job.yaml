@@ -8,7 +8,7 @@
      argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 #     argocd.argoproj.io/sync-wave: "1"
  spec:
-   backoffLimit: 6 # number of retries
+   backoffLimit: 1 # number of retries
    template:
      spec:
        containers:
@@ -17,6 +17,6 @@
         #    - configMapRef:
         #        name: test-cm
          image: alpine:3.8
-         command: [sh, -c]
-         args: [exit 0]
+         command: [sh, -c, sleep 400]
+         args: [exit 1]
        restartPolicy: Never
