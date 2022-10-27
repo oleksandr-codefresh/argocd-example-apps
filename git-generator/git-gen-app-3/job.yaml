@@ -18,5 +18,5 @@
                name: test-cm
          image: alpine:3.8
          command: [sh, -c]
-         args: [exit 0]
+         args: [exit 1]
        restartPolicy: Never
