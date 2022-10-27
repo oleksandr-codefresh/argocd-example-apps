@@ -3,8 +3,8 @@
  metadata:
    generateName: schema-migrate-
    annotations:
-#     argocd.argoproj.io/hook: PreSync
-     argocd.argoproj.io/hook: Sync
+     argocd.argoproj.io/hook: PreSync
+    #  argocd.argoproj.io/hook: Sync
      argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 #     argocd.argoproj.io/sync-wave: "1"
  spec:
@@ -13,9 +13,9 @@
      spec:
        containers:
        - name: sleep-fail
-         envFrom:
-           - configMapRef:
-               name: test-cm
+        #  envFrom:
+        #    - configMapRef:
+        #        name: test-cm
          image: alpine:3.8
          command: [sh, -c]
          args: [exit 0]
