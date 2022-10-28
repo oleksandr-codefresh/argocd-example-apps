@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: placeholder-analysis
   labels:
-    showDiff: 'some-text3'
+    showDiff: 'some-text4'
 spec:
   metrics:
     - name: randfail
