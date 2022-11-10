@@ -1,20 +1,19 @@
  apiVersion: batch/v1
  kind: Job
  metadata:
-   generateName: schema-migrate-
+   name: datamodel-create-213e94b-1
    annotations:
      argocd.argoproj.io/hook: Sync
-     argocd.argoproj.io/hook-delete-policy: HookSucceeded
-     argocd.argoproj.io/sync-wave: '-2'
+     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
  spec:
    backoffLimit: 1 # number of retries
    template:
      spec:
        containers:
        - name: sleep-fail
-#         envFrom:
-#          - configMapRef:
-#              name: test-cm-2
+         envFrom:
+          - configMapRef:
+              name: test-cm-1
          image: alpine:3.8
          command: [sh, -c]
          args: [exit 0]
