@@ -13,7 +13,7 @@
        - name: sleep-fail
          envFrom:
           - configMapRef:
-              name: test-cm-1
+              name: test-cm-2
          image: alpine:3.8
          command: [sh, -c]
          args: [exit 0]
