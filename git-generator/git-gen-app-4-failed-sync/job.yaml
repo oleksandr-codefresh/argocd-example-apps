@@ -5,16 +5,16 @@
    annotations:
      argocd.argoproj.io/hook: Sync
      argocd.argoproj.io/hook-delete-policy: HookSucceeded
-     argocd.argoproj.io/sync-wave: '-1'
+     argocd.argoproj.io/sync-wave: '-2'
  spec:
    backoffLimit: 1 # number of retries
    template:
      spec:
        containers:
        - name: sleep-fail
-         envFrom:
-          - configMapRef:
-              name: test-cm-2
+#         envFrom:
+#          - configMapRef:
+#              name: test-cm-2
          image: alpine:3.8
          command: [sh, -c]
          args: [exit 0]
