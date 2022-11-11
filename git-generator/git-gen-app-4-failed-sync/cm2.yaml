@@ -7,6 +7,6 @@
 #     argocd.argoproj.io/compare-options: IgnoreExtraneous
 #     argocd.argoproj.io/sync-wave: "-1"
    labels:
-     showDiff: 'some-text'
+     showDiff: 'some-tsext'
  data:
    TEST_ENV: en
