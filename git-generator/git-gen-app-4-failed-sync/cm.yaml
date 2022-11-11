@@ -7,6 +7,6 @@ metadata:
 #     argocd.argoproj.io/compare-options: IgnoreExtraneous
 #     argocd.argoproj.io/sync-wave: "-1"
   labels:
-    showDiff: 'some-text'
+    showDiff: 'some-t2ext'
 data:
   TEST_ENV: en
