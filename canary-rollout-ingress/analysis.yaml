@@ -32,7 +32,7 @@ spec:
     count: 3
     interval: 10s
     successCondition: result == 'good'
-    failureCondition: result == 'bad'
+    failureCondition: result == 'bad1'
     # failureLimit: 3
     provider:
       # job:
