@@ -47,4 +47,4 @@ spec:
       web:
         url: "https://swapi.dev/api/people/1"
         timeoutSeconds: 20 # defaults to 10 seconds
-        jsonPath: "{$.data.height}"
+        jsonPath: "{$.height}"
