@@ -29,7 +29,7 @@ metadata:
 spec:
   metrics:
   - name: randfail
-    count: 3
+    # count: 3
     interval: 10s
     successCondition: result == 'good'
     failureCondition: result == 'bad1'
