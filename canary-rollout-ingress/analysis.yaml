@@ -31,6 +31,8 @@ spec:
   - name: randfail
     count: 3
     interval: 10s
+    successCondition: result >= 190
+    failureCondition: result <= 160
     # failureLimit: 3
     provider:
       # job:
