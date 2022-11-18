@@ -37,7 +37,7 @@ spec:
       containers:
         - name: express-microservice
           image: >-
-            gcr.io/heptio-images/ks-guestbook-demo:0.1
+            gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3000
           resources:
