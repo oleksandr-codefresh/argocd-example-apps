@@ -33,7 +33,7 @@ spec:
   - name: randfail
     # count: 3
     # interval: 10s
-    successCondition: result == 'good'
+    successCondition: result == '172'
     failureCondition: result == 'bad1'
     # failureLimit: 3
     provider:
