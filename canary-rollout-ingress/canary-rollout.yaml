@@ -41,6 +41,12 @@ spec:
             gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3000
+          env:
+            - name: SPECIAL_LEVEL_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: placeholder-configmap
+                  key: special.how
           resources:
             requests:
               memory: 32Mi
