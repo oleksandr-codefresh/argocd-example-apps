@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: canary-demo
   labels:
-    diff: 'some-diff'
+    diff: 'some-diff1'
 spec:
   progressDeadlineSeconds: 30
   replicas: 2
@@ -15,6 +15,7 @@ spec:
             duration: 20s
         # - pause: {}
         - setWeight: 20
+        - setWeight: 30
         - analysis:
             templates:
               - templateName: mixed-fail
@@ -37,7 +38,7 @@ spec:
       containers:
         - name: express-microservice
           image: >-
-            gcr.io/heptio-images/ks-guestbook-demo:0.2
+            gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3000
           resources:
