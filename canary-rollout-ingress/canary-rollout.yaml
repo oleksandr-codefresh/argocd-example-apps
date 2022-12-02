@@ -16,11 +16,11 @@ spec:
         # - pause: {}
         # - setWeight: 20
         - setWeight: 30
-        - analysis:
-            templates:
-              - templateName: mixed-fail
-        - pause:
-            duration: 20s
+        # - analysis:
+        #     templates:
+        #       - templateName: mixed-fail
+        # - pause:
+        #     duration: 20s
         # - analysis:
         #     templates:
         #       - templateName: mixed-roll-tests
@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.1
+          image: xeonalex/guesbook:0.2
           ports:
             - containerPort: 3000
           env:
