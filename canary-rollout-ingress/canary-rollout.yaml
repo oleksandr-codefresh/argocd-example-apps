@@ -11,10 +11,10 @@ spec:
   strategy:
     canary:
       steps:
-        - pause:
-            duration: 20s
+        # - pause:
+        #     duration: 20s
         # - pause: {}
-        - setWeight: 20
+        # - setWeight: 20
         - setWeight: 30
         - analysis:
             templates:
@@ -24,9 +24,9 @@ spec:
         # - analysis:
         #     templates:
         #       - templateName: mixed-roll-tests
-        - setWeight: 50
-        - pause:
-            duration: 20s
+        # - setWeight: 50
+        # - pause:
+        #     duration: 20s
   selector:
     matchLabels:
       app: express-microservice
@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3000
           env:
