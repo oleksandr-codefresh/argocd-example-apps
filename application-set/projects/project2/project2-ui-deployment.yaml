@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project2-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: project2-ui
+  template:
+    metadata:
+      labels:
+        app: project2-ui
+    spec:
+      containers:
+        - image: docker.io/azopat/ks-guestbook-demo:0.1
+          name: project2-ui
+          ports:
+            - containerPort: 80
