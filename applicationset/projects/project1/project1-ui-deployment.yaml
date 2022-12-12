@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: project1-ui
   labels: 
-    sasd: aasssssa
+    sasd: aaa
 spec:
   replicas: 1
   revisionHistoryLimit: 3
