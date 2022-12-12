@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: project1-ui
+  labels: 
+    sasd: asdas
 spec:
   replicas: 1
   revisionHistoryLimit: 3
