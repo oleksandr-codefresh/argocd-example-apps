@@ -61,8 +61,7 @@ spec:
     provider:
       web:
         body: >-
-          {"text":"{{ args.jira.issue }}: {{ args.service }} deployment
-          started - Slack notification"}
+          {"text":"sd deployment started - Slack notification"}
         headers:
           - key: Content-Type
             value: application/json
