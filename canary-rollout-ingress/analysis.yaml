@@ -33,7 +33,9 @@ spec:
   - name: randfail
     # count: 3
     # interval: 10s
-    successCondition: result == '173'
+    # successCondition: result == '172' # correct
+    # successCondition: result == '173' # wrong 
+    successCondition: result == 'ok'
     # failureLimit: 3
     provider:
       # job:
@@ -51,4 +53,4 @@ spec:
         # url: "https://swapi.dev/api/people/1"
         url: "https://swapi.py4e.com/api/people/1"
         timeoutSeconds: 20 # defaults to 10 seconds
-        jsonPath: "{$.height}"
+        jsonPath: "{$}"
