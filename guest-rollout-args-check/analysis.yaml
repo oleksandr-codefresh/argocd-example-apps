@@ -9,7 +9,7 @@ spec:
     valueFrom:
       configMapKeyRef:
         name: config
-        key: URL2
+        key: URL1
   metrics:
   - name: pass-roll-2
     count: 3
