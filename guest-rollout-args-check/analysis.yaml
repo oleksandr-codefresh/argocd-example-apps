@@ -9,7 +9,9 @@ spec:
     valueFrom:
       secretKeyRef:
         name: mysecret
-        key: URL2
+        key: URL1
+  - name: hostname2
+    value: 'value1'
   metrics:
   - name: pass-roll-2
     count: 3
@@ -34,6 +36,8 @@ spec:
       secretKeyRef:
         name: mysecret
         key: URL2
+  - name: hostname2
+    value: 'value2'
   metrics:
   - name: randfail
     count: 1
