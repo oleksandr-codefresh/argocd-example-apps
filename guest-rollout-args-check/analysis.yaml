@@ -6,7 +6,10 @@ metadata:
 spec:
   args: 
   - name: hostname
-    value: "https://swapi.dev/api/people/1"
+    valueFrom:
+      secretKeyRef:
+        name: mysecret
+        key: URL2
   metrics:
   - name: pass-roll-2
     count: 3
@@ -27,7 +30,10 @@ metadata:
 spec:
   args: 
   - name: hostname
-    value: "https://swapi.py4e.com/api/people/1"
+    valueFrom:
+      secretKeyRef:
+        name: mysecret
+        key: URL2
   metrics:
   - name: randfail
     count: 1
