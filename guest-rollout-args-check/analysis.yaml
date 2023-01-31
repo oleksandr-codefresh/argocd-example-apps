@@ -5,11 +5,11 @@ metadata:
   name: at-1
 spec:
   args: 
-  # - name: hostname
-  #   valueFrom:
-  #     secretKeyRef:
-  #       name: mysecret
-  #       key: URL1
+  - name: hostname
+    valueFrom:
+      secretKeyRef:
+        name: mysecret
+        key: URL1
   - name: hostname2
     value: "value1"
   metrics:
@@ -31,11 +31,11 @@ metadata:
   name: at-2
 spec:
   args: 
-  # - name: hostname
-  #   valueFrom:
-  #     secretKeyRef:
-  #       name: mysecret
-  #       key: URL2
+  - name: hostname
+    valueFrom:
+      secretKeyRef:
+        name: mysecret
+        key: URL2
   - name: hostname2
     value: "value2"
   metrics:
