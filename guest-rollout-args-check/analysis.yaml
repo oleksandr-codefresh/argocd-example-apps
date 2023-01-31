@@ -1,0 +1,41 @@
+---
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: at-1
+spec:
+  args: 
+  - name: hostname
+    value: "https://swapi.dev/api/people/1"
+  metrics:
+  - name: pass-roll-2
+    count: 3
+    interval: 5s
+    failureLimit: 1
+    provider:
+      web:
+        url: "{{ args.hostname }}"
+        timeoutSeconds: 20 # defaults to 10 seconds
+        jsonPath: "{$.height}"
+---
+
+---
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: at-2
+spec:
+  args: 
+  - name: hostname
+    value: "https://swapi.py4e.com/api/people/1"
+  metrics:
+  - name: randfail
+    count: 1
+    interval: 5s
+    failureLimit: 1
+    provider:
+      web:
+        url: "{{ args.hostname }}"
+        timeoutSeconds: 20 # defaults to 10 seconds
+        jsonPath: "{$.height}"
+

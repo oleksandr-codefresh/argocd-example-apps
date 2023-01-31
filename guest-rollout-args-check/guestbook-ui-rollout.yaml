@@ -1,0 +1,45 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: rollout-test-4
+  labels:
+    sds: sssssdsd
+spec:
+  replicas: 2
+  revisionHistoryLimit: 1
+  strategy:
+    canary:
+      # stableService: express-active
+      # canaryService: express-preview
+      # trafficRouting:
+      #   nginx:
+      #     stableIngress: express-stable-ingress
+      # analysis:
+      #   templates:
+      #     - templateName: mixed-roll-tests
+      #   startingStep: 1
+      steps:
+        - pause: {duration: 10s}
+        - analysis:
+            templates:
+            - templateName: at-1
+            - templateName: at-2
+        - setWeight: 50
+        - pause: {duration: 30s}
+  selector:
+    matchLabels:
+      app: express-microservice
+  template:
+    metadata:
+      labels:
+        app: express-microservice
+    spec:
+      containers:
+        - name: express-microservice
+          image: xeonalex/guesbook:0.1
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: 32Mi
+              cpu: 5m
