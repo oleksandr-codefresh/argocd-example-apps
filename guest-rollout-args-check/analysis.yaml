@@ -7,8 +7,8 @@ spec:
   args: 
   - name: hostname
     valueFrom:
-      secretKeyRef:
-        name: mysecret
+      configMapKeyRef:
+        name: config
         key: URL2
   metrics:
   - name: pass-roll-2
@@ -31,8 +31,8 @@ spec:
   args: 
   - name: hostname
     valueFrom:
-      secretKeyRef:
-        name: mysecret
+      configMapKeyRef:
+        name: config
         key: URL2
   metrics:
   - name: randfail
