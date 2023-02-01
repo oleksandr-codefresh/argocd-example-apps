@@ -24,6 +24,7 @@ spec:
             templates:
             - templateName: at-1
             - templateName: at-2
+        - pause: {duration: 60s}
         - setWeight: 50
         - pause: {duration: 30s}
   selector:
@@ -36,7 +37,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.1
+          image: xeonalex/guesbook:0.2
           ports:
             - containerPort: 3000
           resources:
