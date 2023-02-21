@@ -16,7 +16,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.3
+        - image: xeonalex/guesbook:0.2
           name: express
           ports:
             - name: http
@@ -25,9 +25,9 @@ spec:
   minReadySeconds: 30
   strategy:
     canary:
-      # analysis:
-      #   templates:
-      #     - templateName: only-fail
+      analysis:
+        templates:
+          - templateName: only-fail
         # startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - setWeight: 20
