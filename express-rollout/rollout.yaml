@@ -15,6 +15,7 @@ spec:
     metadata:
       labels:
         app: express
+        appss: exsspress
     spec:
       containers:
         - image: xeonalex/guesbook:0.3
