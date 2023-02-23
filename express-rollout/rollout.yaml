@@ -4,6 +4,7 @@ metadata:
   name: express-roll
   labels:
     somelb: some
+    # somelbv: some2
 spec:
   replicas: 1
   revisionHistoryLimit: 1
@@ -16,7 +17,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.3
           name: express
           ports:
             - name: http
@@ -27,16 +28,18 @@ spec:
     canary:
       # analysis:
       #   templates:
-      #     - templateName: only-fail
-        # startingStep: 1 # delay starting analysis run until setWeight: 40%
+      #     - templateName: background
+      #     - templateName: background2
+      #   startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - setWeight: 20
-        - pause: {duration: 20s}
 #         - setWeight: 75
-        # - analysis:
-        #     templates:
-        #     - templateName: only-fail
-        - pause: {duration: 15s}
+        - analysis:
+            templates:
+            - templateName: background
+            # - templateName: background2
+        - pause: {duration: 60s}
+        - pause: {duration: 60s}
         # - analysis:
         #     templates:
         #     - templateName: prometheus-template
