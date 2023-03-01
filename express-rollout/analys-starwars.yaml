@@ -26,7 +26,8 @@ spec:
   - name: starw-api-2
     count: 30
     interval: 5s
-    failureLimit: 1
+    failureCondition: result != '2'
+    failureLimit: 30
     provider:
       web:
         url: https://swapi.dev/api/people/1
