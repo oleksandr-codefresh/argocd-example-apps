@@ -43,7 +43,8 @@ spec:
   metrics:
   - name: starw-api-2
     count: 5
-    interval: 5s
+    interval: 10s
+    inconclusiveLimit: 4
     failureCondition: result == '170'
     successCondition: result == '175'
     failureLimit: 4
