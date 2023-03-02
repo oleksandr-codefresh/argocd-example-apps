@@ -44,9 +44,9 @@ spec:
         - analysis:
             templates:
             - templateName: star-w-template-2
-         - analysis:
-             templates:
-              - templateName: background
+        - analysis:
+            templates:
+            - templateName: background
             # - templateName: background2
         # - pause: {duration: 60s}
         - pause: {duration: 20s}
