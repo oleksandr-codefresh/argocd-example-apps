@@ -48,7 +48,7 @@ spec:
         #     templates:
         #     - templateName: background
             # - templateName: background2
-        - pause: {duration: 40s}
+        # - pause: {duration: 40s}
         # - pause: {duration: 60s}
         - pause: {duration: 20s}
         # - analysis:
