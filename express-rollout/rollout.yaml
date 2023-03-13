@@ -4,7 +4,7 @@ metadata:
   name: express-roll
   labels:
     somelb: some
-    # somelbv: some2
+    somelbv: some2
 spec:
   replicas: 1
   revisionHistoryLimit: 1
