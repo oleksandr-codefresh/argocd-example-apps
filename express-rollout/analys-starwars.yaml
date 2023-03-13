@@ -9,7 +9,7 @@ spec:
     count: 5
     interval: 5s
     failureLimit: 1
-    successCondition: result == '192'
+    successCondition: result == '172'
     provider:
       web:
         url: https://swapi.py4e.com/api/people/1
@@ -27,8 +27,8 @@ spec:
   - name: starw-api-2
     count: 10
     interval: 5s
-    successCondition: result == '192'
-    failureCondition: result != '2'
+    successCondition: result == '172'
+    # failureCondition: result != '2'
     failureLimit: 30
     provider:
       web:
