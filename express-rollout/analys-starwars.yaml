@@ -6,7 +6,7 @@ metadata:
 spec:
   metrics:
   - name: starw-api-1
-    count: 30
+    count: 5
     interval: 5s
     failureLimit: 1
     provider:
@@ -24,7 +24,7 @@ metadata:
 spec:
   metrics:
   - name: starw-api-2
-    count: 30
+    count: 10
     interval: 5s
     failureCondition: result != '2'
     failureLimit: 30
