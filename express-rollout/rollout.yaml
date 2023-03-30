@@ -34,7 +34,7 @@ spec:
       #   startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - pause: {duration: 5s}
-        - pause: {duration: 5s}
+        # - pause: {duration: 5s}
         # - pause: {duration: 20s}
         - pause: {duration: 10s}
         # - analysis:
