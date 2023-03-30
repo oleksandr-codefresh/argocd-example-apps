@@ -37,9 +37,9 @@ spec:
         #     templates:
         #     - templateName: star-w-template-1
         - setWeight: 20
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-1
+        - analysis:
+            templates:
+            - templateName: star-w-template-1
 #         - setWeight: 75
         # - analysis:
         #    templates:
