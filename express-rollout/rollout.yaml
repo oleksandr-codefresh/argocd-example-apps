@@ -33,7 +33,8 @@ spec:
       #     - templateName: background2
       #   startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
-        # - pause: {duration: 5s}
+        - pause: {duration: 5s}
+        - pause: {duration: 5s}
         - pause: {duration: 5s}
         # - analysis:
         #     templates:
