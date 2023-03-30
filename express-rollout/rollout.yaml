@@ -18,7 +18,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.3
+        - image: xeonalex/guesbook:0.1
           name: express
           ports:
             - name: http
@@ -35,7 +35,8 @@ spec:
       steps:
         - pause: {duration: 5s}
         - pause: {duration: 5s}
-        - pause: {duration: 5s}
+        - pause: {duration: 20s}
+        - pause: {duration: 10s}
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-1
@@ -55,7 +56,6 @@ spec:
         #     - templateName: background
             # - templateName: background2
         - pause: {duration: 10s}
-        - pause: {duration: 20s}
         # - analysis:
         #     templates:
         #     - templateName: prometheus-template
