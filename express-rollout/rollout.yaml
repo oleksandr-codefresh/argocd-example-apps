@@ -35,7 +35,7 @@ spec:
       steps:
         - pause: {duration: 5s}
         - pause: {duration: 5s}
-        # - pause: {duration: 5s}
+        - pause: {duration: 5s}
         - pause: {duration: 10s}
         # - analysis:
         #     templates:
