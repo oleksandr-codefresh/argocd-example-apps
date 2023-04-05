@@ -18,7 +18,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.1
           name: express
           ports:
             - name: http
@@ -33,15 +33,15 @@ spec:
       #     - templateName: background2
       #   startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
-        - pause: {duration: 5s}
-        - pause: {duration: 5s}
-        - pause: {duration: 5s}
-        - pause: {duration: 10s}
-        - pause: {duration: 5s}
-        - pause: {duration: 5s}
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-1
+        # - pause: {duration: 5s}
+        # - pause: {duration: 5s}
+        # - pause: {duration: 5s}
+        # - pause: {duration: 10s}
+        # - pause: {duration: 5s}
+        # - pause: {duration: 5s}
+        - analysis:
+            templates:
+            - templateName: star-w-template-1
         - setWeight: 20
         # - analysis:
         #     templates:
