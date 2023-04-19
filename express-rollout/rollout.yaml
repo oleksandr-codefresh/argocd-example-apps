@@ -6,6 +6,7 @@ metadata:
     somelb: some
     somelbv: some2
 spec:
+  progressDeadlineSeconds: 100
   replicas: 1
   revisionHistoryLimit: 1
   selector:
@@ -18,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.3
+        - image: xeonalex/guesbook:0.3s
           name: express
           ports:
             - name: http
@@ -34,8 +35,8 @@ spec:
       #   startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         # - pause: {duration: 5s}
-        - pause: {duration: 5s}
-        - pause: {duration: 5s}
+        # - pause: {duration: 5s}
+        # - pause: {duration: 5s}
         - pause: {duration: 10s}
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
@@ -57,7 +58,7 @@ spec:
         #     templates:
         #     - templateName: background
             # - templateName: background2
-        - pause: {duration: 60s}
+        - pause: {duration: 40s}
         # - analysis:
         #     templates:
         #     - templateName: prometheus-template
