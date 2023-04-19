@@ -6,7 +6,7 @@ metadata:
     somelb: some
     somelbv: some2
 spec:
-  progressDeadlineSeconds: 100
+  progressDeadlineSeconds: 180
   replicas: 1
   revisionHistoryLimit: 1
   selector:
@@ -19,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.3s
+        - image: xeonalex/guesbook:0.1
           name: express
           ports:
             - name: http
@@ -38,12 +38,13 @@ spec:
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
         - pause: {duration: 10s}
+        - setWeight: 50
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
-        - analysis:
-            templates:
-            - templateName: star-w-template-1
-        - setWeight: 20
+        # - analysis:
+        #     templates:
+        #     - templateName: star-w-template-1
+        # - setWeight: 75
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-1
@@ -58,7 +59,7 @@ spec:
         #     templates:
         #     - templateName: background
             # - templateName: background2
-        - pause: {duration: 40s}
+        - pause: {duration: 20s}
         # - analysis:
         #     templates:
         #     - templateName: prometheus-template
