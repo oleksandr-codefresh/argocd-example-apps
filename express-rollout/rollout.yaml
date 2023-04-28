@@ -41,9 +41,9 @@ spec:
         - setWeight: 50
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
-        - analysis:
-            templates:
-            - templateName: only-fail2
+        # - analysis:
+        #     templates:
+        #     - templateName: only-fail2
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-1
