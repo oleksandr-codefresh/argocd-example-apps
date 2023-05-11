@@ -4,7 +4,7 @@ metadata:
   name: express-roll
   labels:
     somelb: some
-    somelbv: some2sd
+    somelbv: some2sds
 spec:
   progressDeadlineSeconds: 180
   replicas: 1
