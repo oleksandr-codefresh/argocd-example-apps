@@ -19,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.3
           name: express
           ports:
             - name: http
@@ -37,6 +37,9 @@ spec:
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
+        - pause: {duration: 10s}
+        - pause: {duration: 40s}
+        - pause: {duration: 15s}
         - pause: {duration: 10s}
         - setWeight: 50
         # - pause: {duration: 5s}
