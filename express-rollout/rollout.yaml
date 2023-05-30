@@ -14,7 +14,7 @@ spec:
       app: express
   template:
     metadata:
-      labesls:
+      labels:
         app: express
         # appss: exsspress
     spec:
