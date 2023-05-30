@@ -6,7 +6,7 @@ metadata:
     somelb: some
     somelbv: some2sds
 spec:
-  progressDeadlineSeconds: 30
+  progressDeadlineSeconds: 180
   replicas: 1
   revisionHistoryLimit: 1
   selector:
@@ -19,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.3
           name: express
           ports:
             - name: http
