@@ -6,7 +6,7 @@ metadata:
     somelb: some
     somelbv: some2sds
 spec:
-  progressDeadlineSeconds: 180
+  progressDeadlineSeconds: 30
   replicas: 1
   revisionHistoryLimit: 1
   selector:
