@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
+  progressDeadlineSeconds: 60
   strategy:
     type: Recreate
   replicas: 3
@@ -16,7 +17,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.3
         name: guestbook-ui
         ports:
         - containerPort: 80
