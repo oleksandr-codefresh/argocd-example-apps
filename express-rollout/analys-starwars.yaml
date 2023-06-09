@@ -6,7 +6,7 @@ metadata:
 spec:
   metrics:
   - name: starw-api-1
-    count: 5
+    count: 2
     interval: 5s
     failureLimit: 1
     successCondition: result == '172'

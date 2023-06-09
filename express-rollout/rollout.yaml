@@ -19,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.2
+        - image: xeonalex/guesbook:0.3
           name: express
           ports:
             - name: http
@@ -47,9 +47,9 @@ spec:
         # - analysis:
         #     templates:
         #     - templateName: only-fail2
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-1
+        - analysis:
+            templates:
+            - templateName: star-w-template-1
         # - setWeight: 75
         # - analysis:
         #     templates:
