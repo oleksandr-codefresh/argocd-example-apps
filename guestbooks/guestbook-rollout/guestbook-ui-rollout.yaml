@@ -10,7 +10,7 @@ spec:
   strategy:
     canary:
       steps:
-        - pause: {duration: 15}
+        - pause: {duration: 60}
   selector:
     matchLabels:
       app: express-microservice
