@@ -51,7 +51,7 @@ spec:
     consecutiveErrorLimit: 3
     failureCondition: result == '170'
     successCondition: result == '175'
-    failureLimit: 4
+    failureLimit: 2
     provider:
       web:
         url: https://swapi.dev/api/people/1
