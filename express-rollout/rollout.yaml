@@ -57,11 +57,11 @@ spec:
         # - setWeight: 75
 #         - setWeight: 75
         - analysis:
-           templates:
-           - templateName: star-w-template-3-inconclusive
+          templates:
+            - templateName: star-w-template-3-inconclusive
         - analysis:
-           templates:
-          - templateName: star-w-template-1
+          templates:
+            - templateName: star-w-template-1
         - pause: {duration: 50s}
         - pause: {duration: 40s}
         # - analysis:
