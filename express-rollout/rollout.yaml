@@ -60,7 +60,7 @@ spec:
            templates:
            - templateName: star-w-template-3-inconclusive
         - analysis:
-          templates:
+           templates:
           - templateName: star-w-template-1
         - pause: {duration: 50s}
         - pause: {duration: 40s}

@@ -44,10 +44,10 @@ metadata:
 spec:
   metrics:
   - name: starw-api-2
-    count: 5
-    interval: 10s
+    count: 2
+    interval: 5s
     initialDelay: 5s
-    inconclusiveLimit: 4
+    inconclusiveLimit: 1
     consecutiveErrorLimit: 3
     failureCondition: result == '170'
     successCondition: result == '175'
