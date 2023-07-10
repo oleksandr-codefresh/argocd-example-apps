@@ -33,11 +33,11 @@ spec:
       #     - templateName: background2
       #   startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
-        - setWeight: 60
+        # - setWeight: 60
         # - pause: {}
-        - pause: {duration: 45}
-        - setWeight: 60
-        - pause: {duration: 45}
+        # - pause: {duration: 45}
+        # - setWeight: 60
+        # - pause: {duration: 45}
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
         # - pause: {duration: 5s}
@@ -59,9 +59,11 @@ spec:
         #     templates:
         #     - templateName: star-w-template-1
 #         - setWeight: 75
-        # - analysis:
-        #    templates:
-        #    - templateName: star-w-template-3-inconclusive
+        - analysis:
+           templates:
+           - templateName: star-w-template-3-inconclusive
+        - pause: {duration: 40s}
+        - pause: {duration: 40s}
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-2
