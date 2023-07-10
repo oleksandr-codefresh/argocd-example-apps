@@ -18,7 +18,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: xeonalex/guesbook:0.1
+        - image: xeonalex/guesbook:0.2
           name: express
           ports:
             - name: http
@@ -55,13 +55,13 @@ spec:
             # templates:
             # - templateName: star-w-template-1
         # - setWeight: 75
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-1
 #         - setWeight: 75
         - analysis:
            templates:
            - templateName: star-w-template-3-inconclusive
+        - analysis:
+          templates:
+          - templateName: star-w-template-1
         - pause: {duration: 50s}
         - pause: {duration: 40s}
         # - analysis:
