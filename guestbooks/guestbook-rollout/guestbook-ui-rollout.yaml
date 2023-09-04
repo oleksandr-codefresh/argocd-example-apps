@@ -10,7 +10,7 @@ spec:
   strategy:
     canary:
       steps:
-        - pause: {duration: 60}
+        - pause: {duration: 15}
   selector:
     matchLabels:
       app: express-microservice
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3070
           resources:
