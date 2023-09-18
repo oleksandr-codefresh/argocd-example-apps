@@ -10,7 +10,7 @@ spec:
   strategy:
     canary:
       steps:
-        - pause: {duration: 15}
+        - setWeight: 10
         - pause: {duration: 15}
         - setWeight: 50
         - pause: {duration: 15}
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3070
           resources:
