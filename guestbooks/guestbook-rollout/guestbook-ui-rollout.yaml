@@ -11,6 +11,7 @@ spec:
     canary:
       steps:
         - pause: {duration: 15}
+        - pause: {duration: 15}
         - setWeight: 50
         - pause: {duration: 15}
   selector:
@@ -23,7 +24,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3070
           resources:
