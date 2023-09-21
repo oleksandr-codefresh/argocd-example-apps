@@ -19,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.5
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           name: express
           ports:
             - name: http
