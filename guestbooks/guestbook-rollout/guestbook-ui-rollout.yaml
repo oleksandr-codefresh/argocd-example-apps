@@ -12,11 +12,11 @@ spec:
       steps:
         # - setWeight: 10
         # - pause: {duration: 30}
-        - analysis:
-            templates:
-            - templateName: star-w-template-1
+        # - analysis:
+        #     templates:
+        #     - templateName: star-w-template-1
         - setWeight: 50
-        # - pause: {duration: 15}
+        - pause: {duration: 15}
   selector:
     matchLabels:
       app: express-microservice
@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3070
           resources:
