@@ -1,5 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+kind: RolloutAAAAA
 metadata:
   name: express-roll
   labels:
