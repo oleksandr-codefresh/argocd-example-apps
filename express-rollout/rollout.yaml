@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
-kind: RolloutAAAAA
+kind: Rollout
 metadata:
   name: express-roll
   labels:
     somelb: some
     somelbv: some2sds
-spec:
+specASKLMD:
   progressDeadlineSeconds: 60
   replicas: 1
   revisionHistoryLimit: 1
@@ -19,7 +19,7 @@ spec:
         # appss: exsspress
     spec:
       containers:
-        - imageAAAAA: gcr.io/heptio-images/ks-guestbook-demo:0.5
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.5
           name: express
           ports:
             - name: http
