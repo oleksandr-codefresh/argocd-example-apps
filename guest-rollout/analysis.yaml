@@ -3,8 +3,6 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: mixed-roll-tests
-  labels:
-    test: 111
 spec:
   metrics:
   - name: pass-roll-2
