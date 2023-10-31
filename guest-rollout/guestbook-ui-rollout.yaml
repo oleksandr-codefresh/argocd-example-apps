@@ -2,8 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout-test-4
-  labels:
-    sds: sssssdsd
 spec:
   replicas: 2
   revisionHistoryLimit: 1
