@@ -11,10 +11,14 @@ spec:
     canary:
       steps:
         # - setWeight: 10
-        # - pause: {duration: 30}
         - analysis:
             templates:
-            - templateName: star-w-template-1
+            - templateName: star-w-template-3-inconclusive
+        - setWeight: 50
+        - pause: {duration: 30}
+        - analysis:
+            templates:
+            - templateName: star-w-template-3-inconclusive
         - setWeight: 50
         # - pause: {duration: 15}
   selector:
@@ -27,7 +31,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3070
           resources:
