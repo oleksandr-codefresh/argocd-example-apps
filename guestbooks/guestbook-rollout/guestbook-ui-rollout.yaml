@@ -15,7 +15,7 @@ spec:
             templates:
             - templateName: star-w-template-3-inconclusive
         - setWeight: 50
-        - pause: {duration: 30}
+        # - pause: {duration: 30}
         - analysis:
             templates:
             - templateName: star-w-template-3-inconclusive
