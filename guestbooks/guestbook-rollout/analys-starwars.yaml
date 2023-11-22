@@ -29,7 +29,7 @@ spec:
     interval: 5s
     successCondition: result == '172'
     # failureCondition: result != '2'
-    failureLimit: 30
+    failureLimit: 5
     provider:
       web:
         url: https://swapi.dev/api/people/1
