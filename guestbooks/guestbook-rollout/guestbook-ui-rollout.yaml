@@ -11,9 +11,9 @@ spec:
     canary:
       steps:
         # - setWeight: 10
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-3-inconclusive
+        - analysis:
+            templates:
+            - templateName: star-w-template-15
         - setWeight: 50
         # - pause: {duration: 30}
         # - analysis:
@@ -32,7 +32,7 @@ spec:
       containers:
         - name: express-microservice
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3070
           resources:
