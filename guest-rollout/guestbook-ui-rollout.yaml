@@ -17,12 +17,13 @@ spec:
       #     - templateName: mixed-roll-tests
       #   startingStep: 1
       steps:
-        - pause: {duration: 5200s}
+        - pause: {duration: 5000s}
         - analysis:
             templates:
             - templateName: mixed-roll-tests
         - setWeight: 50
-        - pause: {duration: 5200s}
+        - pause: {duration: 4200s}
+        
   selector:
     matchLabels:
       app: express-microservice
