@@ -11,6 +11,7 @@ spec:
     canary:
       steps:
         - setWeight: 10
+        - setWeight: 10
         - analysis:
             templates:
             - templateName: star-w-template-15
