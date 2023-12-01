@@ -23,7 +23,7 @@ spec:
             templates:
             - templateName: star-w-template-3-inconclusive
         - setWeight: 50
-        # - pause: {duration: 305}
+        - pause: {duration: 30}
   selector:
     matchLabels:
       app: express-microservice
@@ -35,7 +35,7 @@ spec:
       containers:
         - name: express-microservice
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
           resources:
