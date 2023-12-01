@@ -17,12 +17,12 @@ spec:
         #     - templateName: star-w-template-15
         # - setWeight: 10
         # - setWeight: 50
-        - pause: {duration: 300}
-        - setWeight: 50
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-3-inconclusive
+        # - pause: {duration: 300}
         # - setWeight: 50
+        - analysis:
+            templates:
+            - templateName: star-w-template-3-inconclusive
+        - setWeight: 50
         # - pause: {duration: 305}
   selector:
     matchLabels:
@@ -35,7 +35,7 @@ spec:
       containers:
         - name: express-microservice
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3070
           resources:
