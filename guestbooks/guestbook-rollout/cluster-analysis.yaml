@@ -22,4 +22,4 @@ spec:
           timeoutSeconds: 120
           url: >-
             https://swapi.dev/api/people/1
-      successCondition: 'false'
+      # successCondition: 'false'
