@@ -4,11 +4,6 @@ metadata:
   name: wait-for.prod.guse4.mgmt
 spec:
   args:
-    - name: k8s.token.prod.guse4.mgmt
-      valueFrom:
-        secretKeyRef:
-          key: prod.guse4.mgmt.token
-          name: unified-pipeline.secret
     - name: namespace.prod.guse4.mgmt
     - name: currentStepIndex
   metrics:
