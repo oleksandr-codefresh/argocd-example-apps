@@ -9,6 +9,7 @@ spec:
   metrics:
     - consecutiveErrorLimit: 2147483646
       count: 2147483647
+      consecutiveErrorLimit: 1000,
       failureCondition: result < {{args.currentStepIndex}}
       failureLimit: 2147483646
       inconclusiveLimit: 0

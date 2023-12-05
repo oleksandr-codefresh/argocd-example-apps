@@ -25,8 +25,8 @@ spec:
                 valueFrom:
                   fieldRef:
                     fieldPath: status.currentStepIndex
-            dryRun:
-              - metricName: .*
+            # dryRun:
+            #   - metricName: .*
             templates:
               - clusterScope: true
                 templateName: wait-for.prod.guse4.mgmt
@@ -60,7 +60,7 @@ spec:
       containers:
         - name: express-microservice2
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3070
           resources:
