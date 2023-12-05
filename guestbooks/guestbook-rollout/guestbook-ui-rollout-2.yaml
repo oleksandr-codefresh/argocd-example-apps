@@ -30,23 +30,23 @@ spec:
             templates:
               - clusterScope: true
                 templateName: wait-for.prod.guse4.mgmt
-        - analysis:
-            args:
-              - name: namespace.prod.guse4.mgmt
-                value: pipeline-prod-test-mgmt
-              - name: currentStepIndex
-                valueFrom:
-                  fieldRef:
-                    fieldPath: status.currentStepIndex
-            dryRun:
-              - metricName: .*
-            templates:
-              - clusterScope: true
-                templateName: wait-for.prod.guse4.mgmt
-        # - pause: {duration: 30}
         # - analysis:
+        #     args:
+        #       - name: namespace.prod.guse4.mgmt
+        #         value: pipeline-prod-test-mgmt
+        #       - name: currentStepIndex
+        #         valueFrom:
+        #           fieldRef:
+        #             fieldPath: status.currentStepIndex
+        #     dryRun:
+        #       - metricName: .*
         #     templates:
-        #     - templateName: star-w-template-3-inconclusive
+        #       - clusterScope: true
+        #         templateName: wait-for.prod.guse4.mgmt
+        # - pause: {duration: 30}
+        - analysis:
+            templates:
+            - templateName: star-w-template-3-inconclusive
         - setWeight: 50
         # - pause: {duration: 15}
   selector:
