@@ -10,7 +10,6 @@ spec:
           key: prod.guse4.mgmt.token
           name: unified-pipeline.secret
     - name: namespace.prod.guse4.mgmt
-    - name: multiClusterRolloutId
     - name: currentStepIndex
   metrics:
     - consecutiveErrorLimit: 2147483646
