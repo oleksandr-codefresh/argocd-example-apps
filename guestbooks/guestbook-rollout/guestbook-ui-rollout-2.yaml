@@ -53,7 +53,9 @@ spec:
               - name: verificationStatusMetric
                 value: passedVal
               - name: verificationStatusMetric2
-                value: '2'
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.labels['testLabel']
             templates:
             - templateName: star-w-template-var-metric
         # - pause: {duration: 15}
@@ -68,7 +70,7 @@ spec:
       containers:
         - name: express-microservice2
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3070
           resources:
