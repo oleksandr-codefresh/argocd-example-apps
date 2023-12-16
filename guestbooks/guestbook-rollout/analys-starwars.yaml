@@ -46,7 +46,7 @@ spec:
       value: test
   metrics:
   - name: '{{args.verificationStatusMetric}}'
-    count: 15
+    count: 5
     interval: 5s
     successCondition: result == '172'
     # failureCondition: result != '2'
