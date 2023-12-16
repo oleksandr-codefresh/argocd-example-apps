@@ -44,6 +44,8 @@ spec:
   args:
     - name: verificationStatusMetric
       value: test
+    - name: verificationStatusMetric2
+      value: test2
   metrics:
   - name: '{{args.verificationStatusMetric}}-0-{{verificationStatusMetric2}}'
     count: 5
