@@ -48,9 +48,9 @@ spec:
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-3-inconclusive
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-3-inconclusive
+        - analysis:
+            templates:
+            - templateName: star-w-template-var-metric
         - setWeight: 50
         # - pause: {duration: 15}
   selector:
@@ -64,7 +64,7 @@ spec:
       containers:
         - name: express-microservice2
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3070
           resources:
