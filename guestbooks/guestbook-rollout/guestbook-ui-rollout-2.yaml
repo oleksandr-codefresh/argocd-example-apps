@@ -45,19 +45,19 @@ spec:
         #       - clusterScope: true
         #         templateName: wait-for.prod.guse4.mgmt
         # - pause: {duration: 5}
-        - analysis:
-            templates:
-            - templateName: star-w-template-1
-        - analysis:
-            args:
-              - name: verificationStatusMetric
-                value: passedVal
-              - name: verificationStatusMetric2
-                valueFrom:
-                  fieldRef:
-                    fieldPath: metadata.labels['testLabel']
-            templates:
-            - templateName: star-w-template-var-metric
+        # - analysis:
+        #     templates:
+        #     - templateName: star-w-template-1
+        # - analysis:
+        #     args:
+        #       - name: verificationStatusMetric
+        #         value: passedVal
+        #       - name: verificationStatusMetric2
+        #         valueFrom:
+        #           fieldRef:
+        #             fieldPath: metadata.labels['testLabel']
+        #     templates:
+        #     - templateName: star-w-template-var-metric
         # - pause: {duration: 15}
   selector:
     matchLabels:
@@ -70,7 +70,7 @@ spec:
       containers:
         - name: express-microservice2
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
           resources:
