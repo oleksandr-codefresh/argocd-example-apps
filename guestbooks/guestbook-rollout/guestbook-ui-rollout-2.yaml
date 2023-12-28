@@ -44,7 +44,7 @@ spec:
         #     templates:
         #       - clusterScope: true
         #         templateName: wait-for.prod.guse4.mgmt
-        - pause: {duration: 50}
+        - pause: {duration: 5}
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-1
