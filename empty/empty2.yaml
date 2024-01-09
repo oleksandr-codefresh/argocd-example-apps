@@ -2,8 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: earth
-  annotations: 
-    cust-annot: solar
+  namespace: cf-apps
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
 spec:
