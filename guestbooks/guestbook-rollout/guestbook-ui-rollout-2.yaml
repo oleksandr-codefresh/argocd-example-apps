@@ -8,6 +8,7 @@ metadata:
     testLabel: 'newvalue'
 spec:
   progressDeadlineSeconds: 10
+  replicass: 1
   replicas: 1
   revisionHistoryLimit: 1
   strategy:
