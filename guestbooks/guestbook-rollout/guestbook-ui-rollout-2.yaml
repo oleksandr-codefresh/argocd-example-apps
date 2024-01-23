@@ -4,9 +4,10 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '1'
   name: mars-rollout2
-  labelss:
+  labels:
     testLabel: 'newvalue'
 spec:
+  sdsdd: 1
   progressDeadlineSeconds: 10
   replicas: 1
   revisionHistoryLimit: 1
