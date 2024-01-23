@@ -1,4 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
+ksind: Rollout
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '1'
+  name: mars-rollout2
+  labels:
+    testLabel: 'newvalue'
+spec:
+
+---
+
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 smetadata:
   annotations:
