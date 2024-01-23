@@ -11,7 +11,7 @@
 
 # ---
 
-apisVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 smetadata:
   annotations:
