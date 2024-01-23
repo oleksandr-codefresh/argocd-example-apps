@@ -7,7 +7,7 @@ spec:
   metrics:
   - name: starw-api-1
     count: '2'
-    interval: 5s
+    interval: 15s
     failureLimit: 1
     successCondition: result == '172'
     provider:
