@@ -7,6 +7,7 @@ metadata:
   labels:
     testLabel: 'newvalue'
 spec:
+  sdsd: 1
 
 ---
 
