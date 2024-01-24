@@ -3,6 +3,7 @@ kind: Rollout
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '1'
+  namespace: cf-apps-sources
   name: mars-rollout2
   labels:
     testLabel: 'newvalue'
