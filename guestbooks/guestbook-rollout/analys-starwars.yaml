@@ -3,7 +3,6 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: star-w-template-1
-  namespace: cf-apps-sources
 spec:
   metrics:
   - name: starw-api-1
