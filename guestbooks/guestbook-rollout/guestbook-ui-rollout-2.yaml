@@ -1,6 +1,6 @@
-a1piVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
-metadata:
+smetadata:
   annotations:
     argocd.argoproj.io/sync-wave: '1'
   name: mars-rollout2
