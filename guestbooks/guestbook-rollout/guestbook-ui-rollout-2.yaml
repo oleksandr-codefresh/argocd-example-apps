@@ -1,4 +1,4 @@
-sapiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
@@ -45,13 +45,13 @@ spec:
         #     templates:
         #       - clusterScope: true
         #         templateName: wait-for.prod.guse4.mgmt
-        # - pause: {duration: 50}
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-1
         - analysis:
             templates:
             - templateName: star-w-template-1
+        - pause: {duration: 50}
+        # - analysis:
+        #     templates:
+        #     - templateName: star-w-template-1
         # - analysis:
         #     args:
         #       - name: verificationStatusMetric
