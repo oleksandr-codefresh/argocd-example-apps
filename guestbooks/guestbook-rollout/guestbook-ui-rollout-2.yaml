@@ -10,7 +10,7 @@ spec:
   progressDeadlineSeconds: 10
   replicas: 1
   revisionHistoryLimit: 1
-  strategsy:
+  strategy:
     canary:
       steps:
         # - setWeight: 10
