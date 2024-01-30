@@ -1,4 +1,4 @@
-sapiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
@@ -10,7 +10,7 @@ spec:
   progressDeadlineSeconds: 10
   replicas: 1
   revisionHistoryLimit: 1
-  strategy:
+  strategsy:
     canary:
       steps:
         # - setWeight: 10
