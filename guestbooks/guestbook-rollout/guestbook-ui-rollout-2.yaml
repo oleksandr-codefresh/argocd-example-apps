@@ -49,9 +49,9 @@ spec:
             templates:
             - templateName: star-w-template-1
         - pause: {duration: 50}
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-1
+        - analysis:
+            templates:
+            - templateName: star-w-template-1
         # - analysis:
         #     args:
         #       - name: verificationStatusMetric
