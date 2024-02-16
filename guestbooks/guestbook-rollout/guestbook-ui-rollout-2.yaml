@@ -7,7 +7,7 @@ metadata:
   labels:
     testLabel: 'newvalue'
 spec:
-  progressDeadlineSeconds: 10
+  progressDeadlineSeconds: 100
   replicas: 1
   revisionHistoryLimit: 1
   strategy:
@@ -45,12 +45,11 @@ spec:
         #     templates:
         #       - clusterScope: true
         #         templateName: wait-for.prod.guse4.mgmt
-        - pause: {duration: 50}
+        - pause: {duration: 10}
         - analysis:
             templates:
             - templateName: star-w-template-1
-        - pause: {duration: 50}
-        - pause: {duration: 50}
+        - pause: {duration: 20}
         - analysis:
             templates:
             - templateName: star-w-template-1
@@ -76,7 +75,7 @@ spec:
       containers:
         - name: express-microservice2
           # image: xeonalex/guesbook:0.1
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           ports:
             - containerPort: 3070
           resources:
