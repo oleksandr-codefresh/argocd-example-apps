@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: star-w-template-1
   labels:
-    test: asdsxxxcxcxc
+    test: asdsxxxcxcxcss
 spec:
   metrics:
   - name: starw-api-1
