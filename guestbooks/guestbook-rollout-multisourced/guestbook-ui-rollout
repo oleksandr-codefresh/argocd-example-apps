@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: mars-rollout
+  labels:
+    testLabel: 'newvalue'
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  strategy:
+    canary:
+      steps:
+        - setWeight: 10
+        # - setWeight: 10
+        # - analysis:
+        #     templates:
+        #     - templateName: star-w-template-15
+        # - setWeight: 10
+        # - setWeight: 50
+        # - pause: {duration: 300}
+        # - setWeight: 50
+        - analysis:
+            templates:
+            - templateName: star-w-template-3-inconclusive
+        - setWeight: 50
+        - pause: {duration: 30}
+  selector:
+    matchLabels:
+      app: express-microservice
+  template:
+    metadata:
+      labels:
+        app: express-microservice
+    spec:
+      containers:
+        - name: express-microservice
+          # image: xeonalex/guesbook:0.1
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          ports:
+            - containerPort: 3070
+          resources:
+            requests:
+              memory: 32Mi
+              cpu: 5m

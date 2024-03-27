@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ClusterAnalysisTemplate
+metadata:
+  name: wait-for.prod.guse4.mgmt
+spec:
+  args:
+    - name: namespace.prod.guse4.mgmt
+    - name: currentStepIndex
+  metrics:
+    - consecutiveErrorLimit: 2147483646
+      count: 2147483647
+      consecutiveErrorLimit: 1000
+      failureCondition: result < {{args.currentStepIndex}}
+      failureLimit: 2147483646
+      inconclusiveLimit: 0
+      interval: 5s
+      name: Wait for GUSE4 (prod/mgmt)
+      provider:
+        web:
+          insecure: true
+          jsonPath: '{$.items[0].status.currentStepIndex}'
+          timeoutSeconds: 120
+          url: >-
+            https://swapi.dev/api/people/1
+      # successCondition: 'false'
