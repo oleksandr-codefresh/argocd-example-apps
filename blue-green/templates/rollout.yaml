@@ -2,6 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
+  annotations:
+    argocd.argoproj.io/sync-wave: '1' # to sync rollout after analysis templates sync
   labels:
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
