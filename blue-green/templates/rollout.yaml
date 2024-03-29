@@ -24,7 +24,7 @@ spec:
       postPromotionAnalysis:
         templates:
           - templateName: post-starwars
-      autoPromotionSeconds: 30
+      # autoPromotionSeconds: 30
       activeService: {{ template "helm-guestbook.fullname" . }}
       previewService: {{ template "helm-guestbook.fullname" . }}-preview
   template:
