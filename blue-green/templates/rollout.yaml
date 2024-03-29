@@ -12,6 +12,9 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
+  analysis:
+    successfulRunHistoryLimit: 2
+    unsuccessfulRunHistoryLimit: 2
   selector:
     matchLabels:
       app: {{ template "helm-guestbook.name" . }}

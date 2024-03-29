@@ -10,6 +10,9 @@ spec:
   progressDeadlineSeconds: 100
   replicas: 2
   revisionHistoryLimit: 1
+  analysis:
+    successfulRunHistoryLimit: 2
+    unsuccessfulRunHistoryLimit: 2
   strategy:
     canary:
       analysis:
