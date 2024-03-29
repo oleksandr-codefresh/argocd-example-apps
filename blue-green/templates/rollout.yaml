@@ -20,7 +20,8 @@ spec:
     blueGreen:
       prePromotionAnalysis:
         templates:
-          - templateName: pre-job
+          # - templateName: pre-job
+          - templateName: pre-starw-inconclusive
       postPromotionAnalysis:
         templates:
           - templateName: post-starwars

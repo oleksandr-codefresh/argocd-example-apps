@@ -21,6 +21,27 @@ spec:
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
+  name: pre-starw-inconclusive
+spec:
+  metrics:
+  - name: starw-api-2
+    count: 2
+    interval: 5s
+    initialDelay: 5s
+    inconclusiveLimit: 1
+    consecutiveErrorLimit: 3
+    failureCondition: result == '170'
+    successCondition: result == '175'
+    failureLimit: 2
+    provider:
+      web:
+        url: https://swapi.dev/api/people/1
+        timeoutSeconds: 20 # defaults to 10 seconds
+        jsonPath: "{$.height}"
+---
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
   name: pre-job
 spec:
   metrics:
