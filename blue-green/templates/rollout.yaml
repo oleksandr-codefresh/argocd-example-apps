@@ -26,6 +26,7 @@ spec:
           - templateName: post-starwars
       # autoPromotionSeconds: 30
       autoPromotionEnabled: false
+      scaleDownDelaySeconds: 60
       activeService: {{ template "helm-guestbook.fullname" . }}
       previewService: {{ template "helm-guestbook.fullname" . }}-preview
   template:
