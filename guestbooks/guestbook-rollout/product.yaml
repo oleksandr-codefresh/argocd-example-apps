@@ -35,7 +35,7 @@ spec:
             - hotfix
             - fix
         - key: commitMessage
-          operator: NotIns
+          operator: NotIn
           values:
             - hotfix
     - name: multiRegion
