@@ -2,7 +2,7 @@ apiVersion: codefresh.io/v1beta1
 kind: Product
 metadata:
   name: billing
-  annotation:
+  annotations:
     branch: "cr-2134"
 spec:
   promotionTemplateRef: helmApps
