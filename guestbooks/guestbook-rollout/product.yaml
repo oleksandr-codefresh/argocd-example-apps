@@ -34,7 +34,7 @@ spec:
           values:
             - hotfix
             - fix
-        - key: commitMessage
+        - key: commitMessages
           operator: In
           values:
             - hotfix
