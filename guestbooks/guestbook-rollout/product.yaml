@@ -27,7 +27,7 @@ spec:
   promotionFlows:
     - name: hotfix # matchers like in k8s - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements
       matchLabels:
-        suitable-for: hotfix
+        suitable: hotfix
       matchExpressions:
         - key: branch 
           operator: In # In / NotIn
