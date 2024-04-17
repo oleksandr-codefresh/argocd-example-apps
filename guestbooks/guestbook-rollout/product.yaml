@@ -25,7 +25,7 @@ spec:
         jsonPaths:
           - "$.dependencies"  # Promotes dependencies.
   promotionFlows:
-    - name: hotfix # matchers like in k8s - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements
+    hotfix: # matchers like in k8s - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements
       matchLabels:
         suitable: hotfix
       matchExpressions:
@@ -38,7 +38,7 @@ spec:
           operator: NotIn
           values:
             - hotfix
-    - name: multiRegion
+    multi-region:
       matchExpressions:
         - key: commitMessage
           operator: In
