@@ -26,8 +26,6 @@ spec:
           - "$.dependencies"  # Promotes dependencies.
   promotionFlows:
     hotfix: # matchers like in k8s - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements
-      matchLabels:
-        suitable: hotfix
       gitTriggerSelectors:
         - key: branch 
           operator: In # In / NotIn
