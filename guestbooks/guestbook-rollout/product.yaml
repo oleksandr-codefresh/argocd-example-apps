@@ -3,7 +3,7 @@ kind: Product
 metadata:
   name: billing
   annotations:
-    branch: "cr-2134skkknsdsd"
+    branch: "cr-2134skkknsjdsd"
 spec:
   promotionTemplateRef: helmApps
   promotionTemplate:
