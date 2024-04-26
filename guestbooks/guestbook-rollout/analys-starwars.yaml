@@ -2,7 +2,7 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: bla-1.2
+  name: bla 1.2
   labels:
     test: asdsxxxcxcxcss
 spec:
