@@ -1,7 +1,7 @@
 apiVersion: codefresh.io/v1beta1
 kind: Product
 metadata:
-  name: billing
+  name: billin_g
   annotations:
     branch: "cr-2134skkknsjdsd2"
 spec:
