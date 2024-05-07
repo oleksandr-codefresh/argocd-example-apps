@@ -20,9 +20,9 @@ spec:
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-3-inconclusive
-        - analysis:
-            templates:
-            - templateName: fail
+        # - analysis:
+        #     templates:
+        #     - templateName: fail
         - setWeight: 50
         # - pause: { }
         # - analysis:
