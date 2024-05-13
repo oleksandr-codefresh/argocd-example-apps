@@ -36,7 +36,7 @@ spec:
           operator: NotIn
           values:
             - hotfix
-    - name: "multi-region"
+    - name: "multiregion"
       gitTriggerSelectors:
         - key: commitMessage
           operator: In
