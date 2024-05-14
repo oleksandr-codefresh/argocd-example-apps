@@ -56,6 +56,11 @@ spec:
         - analysis:
             templates:
             - templateName: star-w-template-var-metric
+            args:
+              - name: verificationStatusMetric2
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.name
         - pause: {duration: 20}
         - analysis:
             templates:
