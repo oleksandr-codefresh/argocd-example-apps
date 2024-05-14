@@ -61,6 +61,8 @@ spec:
                 valueFrom:
                   fieldRef:
                     fieldPath: metadata.name
+              - name: override
+                value: 'rollout'
         - pause: {duration: 20}
         - analysis:
             templates:

@@ -59,8 +59,10 @@ spec:
           fieldPath: metadata.name
     - name: verificationStatusMetric3
       value: test2
+    - name: override
+      value: 'template'
   metrics:
-  - name: '{{args.verificationStatusMetric}}-0-{{args.verificationStatusMetric2}}'
+  - name: '{{args.verificationStatusMetric}}-0-{{args.override}}'
     count: 5
     interval: 5s
     successCondition: result == '172'
