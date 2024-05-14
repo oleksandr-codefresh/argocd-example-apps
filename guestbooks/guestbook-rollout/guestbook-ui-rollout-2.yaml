@@ -13,9 +13,9 @@ spec:
   revisionHistoryLimit: 1
   strategy:
     canary:
-      analysis:
-        templates:
-          - templateName: background
+      # analysis:
+      #   templates:
+      #     - templateName: background
       steps:
         # - setWeight: 10
         # - analysis:
@@ -24,7 +24,7 @@ spec:
         # - analysis:
         #     templates:
         #     - templateName: fail
-        - setWeight: 50
+        # - setWeight: 50
         # - pause: { }
         # - analysis:
         #     args:
@@ -61,8 +61,8 @@ spec:
                 valueFrom:
                   fieldRef:
                     fieldPath: metadata.name
-              - name: override
-                value: 'rollout'
+              # - name: override
+              #   value: 'rollout'
         - pause: {duration: 20}
         - analysis:
             templates:
@@ -88,7 +88,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.2
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
