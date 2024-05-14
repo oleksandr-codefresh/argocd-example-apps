@@ -54,9 +54,10 @@ spec:
     - name: verificationStatusMetric
       value: test
     - name: verificationStatusMetric2
-      valueFrom:
-        fieldRef:
-          fieldPath: metadata.labels['env']
+      value: test2
+      # valueFrom:
+      #   fieldRef:
+      #     fieldPath: metadata.labels['env']
     - name: verificationStatusMetric3
       value: test2
   metrics:
