@@ -7,7 +7,7 @@ metadata:
   labels:
     testLabel: 'newvalue'
 spec:
-  progressDeadlineSeconds: 100
+  # progressDeadlineSeconds: 100
   replicas: 2
   revisionHistoryLimit: 1
   strategy:
@@ -80,7 +80,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.1
+          image: xeonalex/guesbook:0.3
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
