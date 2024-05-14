@@ -53,11 +53,11 @@ spec:
   args:
     - name: verificationStatusMetric
       value: test
-    - name: verificationStatusMetric
+    - name: verificationStatusMetric2
       valueFrom:
         fieldRef:
           fieldPath: metadata.labels['env']
-    - name: verificationStatusMetric2
+    - name: verificationStatusMetric3
       value: test2
   metrics:
   - name: '{{args.verificationStatusMetric}}-0-{{args.verificationStatusMetric2}}'
