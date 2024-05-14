@@ -47,10 +47,16 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: star-w-template-var-metric
+  labels:
+    env: test
 spec:
   args:
     - name: verificationStatusMetric
       value: test
+    - name: verificationStatusMetric
+      valueFrom:
+        fieldRef:
+          fieldPath: metadata.labels['env']
     - name: verificationStatusMetric2
       value: test2
   metrics:
