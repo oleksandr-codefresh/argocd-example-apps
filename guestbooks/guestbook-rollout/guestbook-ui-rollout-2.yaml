@@ -12,9 +12,9 @@ spec:
   revisionHistoryLimit: 1
   strategy:
     canary:
-      analysis:
-        templates:
-          - templateName: background
+      # analysis:
+      #   templates:
+          # - templateName: background
       steps:
         # - setWeight: 10
         # - analysis:
