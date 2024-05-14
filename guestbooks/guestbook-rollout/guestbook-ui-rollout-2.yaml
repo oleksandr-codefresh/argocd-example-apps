@@ -5,6 +5,7 @@ metadata:
     argocd.argoproj.io/sync-wave: '1'
   name: mars-rollout2
   labels:
+    env: karl
     testLabel: 'newvalue'
 spec:
   # progressDeadlineSeconds: 100
