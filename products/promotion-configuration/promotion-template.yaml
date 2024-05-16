@@ -1,7 +1,7 @@
 # apiVersion: codefresh.io/v1beta1
 # kind: PromotionTemplate
 # metadata:
-#   name: gs-template
+#   name: gs-promotion-template
 # spec:
 #   applicationSourceSelector:
 #     matchExpressions:

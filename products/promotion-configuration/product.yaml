@@ -3,40 +3,35 @@ kind: Product
 metadata:
   name: helm-guestbook
 spec:
-  promotionTemplateRef: helmApps
-  promotionTemplate:
-    # Version Source Configuration:
-    # Specifies the file and JSON path used to retrieve the application version for display in the dashboard.
-    versionSource:
-      file: Chart.yaml  # The file where the version is stored.
-      jsonPath: $.appVersion  # JSON path to the version within the specified file.
-    promotion:
-      Chart.yaml:  # Attributes from Chart.yaml to be promoted.
-        jsonPaths:
-          - $.appVersion  # Promotes the application version.
-          - $.version  # Promotes the version.
-          - $.dependencies  # Promotes dependencies listed in the file.
-      values.yaml:  # Attributes from values.yaml to be promoted.
-        jsonPaths:
-          - $.*.image  # Promotes the image specifications.
-      requirements.yaml:  # Attributes from requirements.yaml to be promoted.
-        jsonPaths:
-          - "$.dependencies"  # Promotes dependencies.
+  promotionTemplateRef: gs-promotion-template
+  # promotionTemplate:
+  #   # Version Source Configuration:
+  #   # Specifies the file and JSON path used to retrieve the application version for display in the dashboard.
+  #   versionSource:
+  #     file: Chart.yaml  # The file where the version is stored.
+  #     jsonPath: $.appVersion  # JSON path to the version within the specified file.
+  #   promotion:
+  #     Chart.yaml:  # Attributes from Chart.yaml to be promoted.
+  #       jsonPaths:
+  #         - $.appVersion  # Promotes the application version.
+  #         - $.version  # Promotes the version.
+  #         - $.dependencies  # Promotes dependencies listed in the file.
+  #     values.yaml:  # Attributes from values.yaml to be promoted.
+  #       jsonPaths:
+  #         - $.*.image  # Promotes the image specifications.
+  #     requirements.yaml:  # Attributes from requirements.yaml to be promoted.
+  #       jsonPaths:
+  #         - "$.dependencies"  # Promotes dependencies.
   promotionFlows:
-    - name: hotfix
-      gitTriggerSelectors:
-        - key: gitRevision
-          operator: In # In / NotIn
-          values:
-            - hotfix
-            - fix
-        - key: commitMessage
-          operator: NotIn
-          values:
-            - hotfix
-    - name: multi-region
+    - name: to-prod
       gitTriggerSelectors:
         - key: commitMessage
           operator: In
           values:
-            - promote
+            - "*[deploy]"
+    - name: demo
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - "*[demo]"
