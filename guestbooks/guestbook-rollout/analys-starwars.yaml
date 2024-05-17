@@ -64,7 +64,7 @@ spec:
     - name: count
       value: '5'
   metrics:
-  - name: '{{args.verificationStatusMetric}}-0-{{args.override}}'
+  - name: '{{ args.verificationStatusMetric }}-0-{{args.override}}'
     count: '{{args.count}}'
     interval: 5s
     successCondition: result == '172'
