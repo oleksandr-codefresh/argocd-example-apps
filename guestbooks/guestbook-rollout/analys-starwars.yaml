@@ -62,7 +62,7 @@ spec:
     - name: override
       value: 'template'
     - name: count
-      value: 5
+      value: '52'
   metrics:
   - name: '{{args.verificationStatusMetric}}-0-{{args.override}}'
     count: '{{args.count}}'
