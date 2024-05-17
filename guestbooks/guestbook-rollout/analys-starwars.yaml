@@ -61,9 +61,11 @@ spec:
       value: test2
     - name: override
       value: 'template'
+    - name: count
+      value: 5
   metrics:
   - name: '{{args.verificationStatusMetric}}-0-{{args.override}}'
-    count: 5
+    count: {{args.count}}
     interval: 5s
     successCondition: result == '172'
     # failureCondition: result != '2'
