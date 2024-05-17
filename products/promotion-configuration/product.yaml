@@ -28,7 +28,7 @@ spec:
         - key: commitMessage
           operator: In
           values:
-            - "*[deploy]"
+            - "*[promotion]"
     - name: demo
       gitTriggerSelectors:
         - key: commitMessage
