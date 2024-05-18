@@ -62,7 +62,7 @@ spec:
                   fieldRef:
                     fieldPath: metadata.name
               - name: count
-                value: 5
+                value: '5'
               - name: verificationStatusMetric2
                 valueFrom:
                   fieldRef:
