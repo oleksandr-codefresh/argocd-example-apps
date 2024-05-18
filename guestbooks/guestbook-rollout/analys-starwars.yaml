@@ -51,20 +51,18 @@ metadata:
     env: test
 spec:
   args:
-    - name: verificationStatusMetric
-      value: test
-    - name: verificationStatusMetric2
+    # expected from rollout
+    - name: rolloutPrefix  
+    - name: count
+    # locally defined
+    - name: templateSuffix
       valueFrom:
         fieldRef:
           fieldPath: metadata.name
-    - name: verificationStatusMetric3
-      value: test2
     - name: override
       value: 'template'
-    - name: count
-      value: '5'
   metrics:
-  - name: '{{ args.verificationStatusMetric }}-0-{{args.override}}'
+  - name: '{{ args.rolloutPrefix }}-{{args.templateSuffix}}'
     count: '{{args.count}}'
     interval: 5s
     successCondition: result == '172'
