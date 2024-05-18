@@ -54,7 +54,7 @@ spec:
     # expected from rollout - will throw error if not provided
     - name: rolloutPrefix  
     - name: count
-      value: '5'
+      value: '6'
     # locally defined
     - name: templateSuffix
       value: 'template'

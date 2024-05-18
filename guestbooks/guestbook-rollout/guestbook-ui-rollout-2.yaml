@@ -58,12 +58,11 @@ spec:
             - templateName: star-w-template-var-metric
             args:
               - name: rolloutPrefix
-                value: 'dsd'
-                # valueFrom:
-                  # fieldRef:
-                    # fieldPath: metadata.name
-              # - name: count
-              #   value: '5'
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.name
+              - name: count
+                value: '5'
               - name: verificationStatusMetric2
                 valueFrom:
                   fieldRef:
