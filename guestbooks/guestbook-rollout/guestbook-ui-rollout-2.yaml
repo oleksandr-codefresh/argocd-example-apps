@@ -68,7 +68,11 @@ spec:
                   fieldRef:
                     fieldPath: metadata.name
               - name: override
-                value: 'rollout'
+                # value: 'rollout'
+                valueFrom:
+                  secretKeyRef:
+                      name: test-secret
+                      key: password
         - pause: {duration: 20}
         - analysis:
             templates:
@@ -94,7 +98,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
