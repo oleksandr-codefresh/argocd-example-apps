@@ -51,14 +51,15 @@ metadata:
     env: test
 spec:
   args:
-    # expected from rollout
+    # expected from rollout - will throw error if not provided
     - name: rolloutPrefix  
     - name: count
     # locally defined
     - name: templateSuffix
-      valueFrom:
-        fieldRef:
-          fieldPath: metadata.name
+      value: 'template'
+      # valueFrom: 
+      #   fieldRef: # works only for rollout doesn't take information from templateSuffix
+      #     fieldPath: metadata.name
     - name: override
       value: 'template'
   metrics:
