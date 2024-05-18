@@ -5,12 +5,12 @@ metadata:
   labels:
     test: asdsxxxcxcxcss
 spec:
-  args:
-  - name: api-token
-    valueFrom:
-      secretKeyRef:
-        name: codefresh-token
-        key: token
+  # args:
+  # - name: api-token
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: codefresh-token
+  #       key: token
   metrics:
   - name: starw-api-1
     count: '2'
