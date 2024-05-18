@@ -62,7 +62,11 @@ spec:
                   fieldRef:
                     fieldPath: metadata.name
               - name: count
-                value: '5'
+                # value: '5'
+                valueFrom:
+                  secretKeyRef: # will result to '' empty value in analysis run spec.args
+                      name: test-secret
+                      key: count
               - name: verificationStatusMetric2
                 valueFrom:
                   fieldRef:
@@ -70,7 +74,7 @@ spec:
               - name: override
                 # value: 'rollout'
                 valueFrom:
-                  secretKeyRef:
+                  secretKeyRef: # will result to '' empty value in analysis run spec.args
                       name: test-secret
                       key: password
         - pause: {duration: 20}
@@ -98,7 +102,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.1
+          image: xeonalex/guesbook:0.3
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
