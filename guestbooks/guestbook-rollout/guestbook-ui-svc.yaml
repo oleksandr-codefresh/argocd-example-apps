@@ -5,6 +5,7 @@ metadata:
 spec:
   ports:
   - port: 3070
+    nodePort: 39845
     targetPort: 3070
   selector:
     app: express-microservice
