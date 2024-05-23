@@ -19,9 +19,9 @@ spec:
         image: alpine:3.8
         command: [sh, -c]
         # resources: {}
-        resources:
-          limits:
-            cpu: '1'
+        # resources:
+        #   limits:
+        #     cpu: '1'
         args: [exit 0]
       restartPolicy: Never
   backoffLimit: 4
