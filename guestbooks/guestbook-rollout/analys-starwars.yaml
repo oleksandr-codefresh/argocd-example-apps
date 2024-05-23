@@ -143,4 +143,10 @@ spec:
                 command: [sh, -c]
                 args: [exit 1]
               restartPolicy: Never
+              initContainers:
+              - name: wait
+                image: alpine:3.8
+                command: [sh, -c]
+                resources: {}
+                args: [exit 1]
           backoffLimit: 0

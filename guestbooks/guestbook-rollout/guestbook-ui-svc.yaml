@@ -4,9 +4,8 @@ metadata:
   name: express-active
 spec:
   ports:
-  - nodePort: 39845
-  # - port: 3070
-    # nodePort: 39845
+  # - nodePort: 39845
+  - port: 3070
     targetPort: 3070
   selector:
     app: express-microservice
