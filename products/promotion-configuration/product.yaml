@@ -28,10 +28,10 @@ spec:
         - key: commitMessage
           operator: In
           values:
-            - "*[promotion]do"
+            - "*[[]promotion]do"
     - name: demo
       gitTriggerSelectors:
         - key: commitMessage
           operator: In
           values:
-            - "*[demo]"
+            - "*[[]demo]"
