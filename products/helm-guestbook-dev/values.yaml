@@ -9,6 +9,9 @@ image:
   tag: 0.1
   pullPolicy: IfNotPresent
 img: {}
+img2: {
+  tag: 2
+}
 
 service:
   type: ClusterIP
