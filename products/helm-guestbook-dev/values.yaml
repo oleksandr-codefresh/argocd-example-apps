@@ -13,6 +13,12 @@ img2: {
   tag: 2
 }
 
+img3: 
+  - name: sd
+    tag: '2.3'
+  - name: cm
+    tag: '0.23.1'
+
 service:
   type: ClusterIP
   port: 80
