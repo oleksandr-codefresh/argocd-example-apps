@@ -5,7 +5,7 @@ metadata:
 spec:
   applicationSourceSelector:
     matchExpressions:
-      - key: in-product
+      - key: unexisted
         operator: Exists
   priority: 0
   versionSource:
