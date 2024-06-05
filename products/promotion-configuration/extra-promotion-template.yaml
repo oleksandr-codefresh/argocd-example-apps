@@ -1,7 +1,7 @@
 apiVersion: codefresh.io/v1beta1
 kind: PromotionTemplate
 metadata:
-  name: gs-promotion-template
+  name: extra-promotion-template
 spec:
   applicationSourceSelector:
     matchExpressions:
@@ -9,15 +9,12 @@ spec:
         operator: Exists
   priority: 0
   versionSource:
-    file: version.yaml
-    jsonPath: appVersionRef
+    file: Chart.yaml
+    jsonPath: appVersion
   promotion:
     Chart.yaml:
       jsonPaths:
         - $.appVersion
-    version.yaml:  # Attributes from Chart.yaml to be promoted.
-      jsonPaths:
-        - $.appVersionInline  # Promotes the application version.
     values.yaml:
       jsonPaths:
         - $..image
