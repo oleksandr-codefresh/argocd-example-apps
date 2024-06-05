@@ -17,7 +17,7 @@ spec:
         - $.appVersion
     version.yaml:  # Attributes from Chart.yaml to be promoted.
       jsonPaths:
-        - $.appVersionInline  # Promotes the application version.
+        - $.appVersionRef  # Promotes the application version.
     values.yaml:
       jsonPaths:
         - $..image
