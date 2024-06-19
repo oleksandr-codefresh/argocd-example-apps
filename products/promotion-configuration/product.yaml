@@ -26,7 +26,7 @@ spec:
   #       jsonPaths:
   #         - "$.dependencies"  # Promotes dependencies.
   promotionFlows:
-    - name: to-prod
+    - namse: to-prod
       gitTriggerSelectors:
         - key: commitMessage
           operator: In
