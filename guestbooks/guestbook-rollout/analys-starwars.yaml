@@ -126,6 +126,8 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: fail
+  labels:
+    test: ssd
 spec:
   metrics:
   - name: fail-always
