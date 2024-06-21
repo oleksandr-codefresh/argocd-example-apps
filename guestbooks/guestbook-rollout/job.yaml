@@ -1,28 +1,28 @@
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: pi
-spec:
-  template:
-    spec:
-      containers:
-      - name: sleep
-        image: alpine:3.8
-        command: [sh, -c]
-        args: [exit 0]
-        resources: {}
-        # resources:
-        #   limits:
-        #     cpu: '1'
-      initContainers:
-      - name: wait
-        image: alpine:3.8
-        command: [sh, -c]
-        # resources: {}
-        # resources:
-        #   limits:
-        #     cpu: '1'
-        args: [exit 0]
-      restartPolicy: Never
-  backoffLimit: 4
+# apiVersion: batch/v1
+# kind: Job
+# metadata:
+#   name: pi
+# spec:
+#   template:
+#     spec:
+#       containers:
+#       - name: sleep
+#         image: alpine:3.8
+#         command: [sh, -c]
+#         args: [exit 0]
+#         resources: {}
+#         # resources:
+#         #   limits:
+#         #     cpu: '1'
+#       initContainers:
+#       - name: wait
+#         image: alpine:3.8
+#         command: [sh, -c]
+#         # resources: {}
+#         # resources:
+#         #   limits:
+#         #     cpu: '1'
+#         args: [exit 0]
+#       restartPolicy: Never
+#   backoffLimit: 4
 
