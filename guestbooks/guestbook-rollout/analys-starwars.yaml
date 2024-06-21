@@ -127,7 +127,7 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: fail
   labels:
-    test: ssdsd
+    test: ssdsdsds
 spec:
   metrics:
   - name: fail-always
