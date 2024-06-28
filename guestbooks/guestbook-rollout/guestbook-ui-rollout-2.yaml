@@ -102,7 +102,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1t
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
