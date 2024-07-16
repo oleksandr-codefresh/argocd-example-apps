@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-guesbook-dev
+  labels:
+    in-product: "true"
+  annotations: 
+    codefresh.io/product: hermes-guestbook
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/foreground
+spec:
+  project: default
+  source:
+    path: products/helm-guestbook-dev
+    repoURL: https://github.com/oleksandr-codefresh/argocd-example-apps
+    targetRevision: hermes-prod-apps
+  destination:
+    name: in-cluster
+    namespace: app-resources-dev
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      # selfHeal: true
+    retry: {}
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=false
+      - Validate=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=false
