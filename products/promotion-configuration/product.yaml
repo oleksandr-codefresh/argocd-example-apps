@@ -3,7 +3,7 @@ kind: Product
 metadata:
   name: helm-guestbook
 spec:
-  # promotionTemplateRef: gs-promotion-template
+  promotionTemplateRef: gs-promotion-template
   # promotionTemplate:
   #   # Version Source Configuration:
   #   # Specifies the file and JSON path used to retrieve the application version for display in the dashboard.
