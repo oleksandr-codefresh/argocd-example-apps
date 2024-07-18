@@ -21,16 +21,14 @@ spec:
       targetRevision: multisource-2
   destination:
     name: in-cluster
-    # name: alina
     namespace: test-dev
   syncPolicy:
-    # automated:
-    #   allowEmpty: true
-    #   prune: true
-    #   selfHeal: true
-    retry: {}
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
     syncOptions:
-      # - PrunePropagationPolicy=foreground
+      - PrunePropagationPolicy=foreground
       - Replace=false
       - PruneLast=false
       - Validate=true
