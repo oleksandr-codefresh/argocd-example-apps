@@ -17,6 +17,8 @@ spec:
       #   templates:
       #     - templateName: background
       steps:
+        - pause: {duration: 105}
+
         # - setWeight: 10
         # - analysis:
         #     templates:
@@ -24,8 +26,8 @@ spec:
         # - analysis:
         #     templates:
         #     - templateName: fail
-        # - setWeight: 50
-        # - pause: { }
+        - setWeight: 50
+        - pause: { }
         # - analysis:
         #     args:
         #       - name: namespace.prod.guse4.mgmt
@@ -52,7 +54,6 @@ spec:
         #     templates:
         #       - clusterScope: true
         #         templateName: wait-for.prod.guse4.mgmt
-        # - pause: {duration: 10}
         # - analysis:
         #     templates:
         #     - templateName: star-w-template-var-metric
@@ -102,7 +103,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
