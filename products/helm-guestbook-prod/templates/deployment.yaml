@@ -10,7 +10,7 @@ metadata:
 spec:
   progressDeadlineSeconds: 30
   replicas: {{ .Values.replicaCount }}
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 5
   selector:
     matchLabels:
       app: {{ template "helm-guestbook.name" . }}
