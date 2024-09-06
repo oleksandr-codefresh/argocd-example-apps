@@ -31,7 +31,11 @@ spec:
         - key: commitMessage
           operator: In
           values:
-            - "*deploy*"
+            - '*deploy*'
+        - key: gitRevision
+          operator: In
+          values:
+            - '*not-personal*'
     - name: demo
       gitTriggerSelectors:
         - key: commitMessage
