@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: xeonalex/guesbook
-  tag: 0.2
+  repository: xeonalex/guesbooK
+  tag: 0.3
   pullPolicy: IfNotPresent
 img: {}
 img2: {
