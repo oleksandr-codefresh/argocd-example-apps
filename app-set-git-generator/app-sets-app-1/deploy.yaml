@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-set-1-deploy
+  labels:
+    sd: dsd
 spec:
   progressDeadlineSeconds: 60
   replicas: 1
