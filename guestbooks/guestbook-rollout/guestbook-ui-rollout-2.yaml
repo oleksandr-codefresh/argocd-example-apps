@@ -27,7 +27,7 @@ spec:
         #     templates:
         #     - templateName: fail
         - setWeight: 50
-        - pause: { }
+        # - pause: { }
         # - analysis:
         #     args:
         #       - name: namespace.prod.guse4.mgmt
