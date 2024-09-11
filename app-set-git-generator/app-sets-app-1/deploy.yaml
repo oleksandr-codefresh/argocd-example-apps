@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app-set-1-deploy
   labels:
-    sd: dsd
+    sd: dsddsds 
     dsd: sdsds
 spec:
   progressDeadlineSeconds: 60
