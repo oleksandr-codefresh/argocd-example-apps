@@ -4,7 +4,7 @@ metadata:
   name: app-set-1-deploy
   labels:
     sd: dsd
-    dsd: sdsddd
+    dsd: sdsds
 spec:
   progressDeadlineSeconds: 60
   replicas: 1
