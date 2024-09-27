@@ -11,6 +11,6 @@ spec:
       containers:
       - name: sleep
         image: alpine:latest
-        command: ["sleep", "120"] # some average time that are now needed for rollout controller to pick the changes
+        command: ["sleep", "120"] # some average time that are now needed for rollout controller to pick the changes -
       restartPolicy: Never
   backoffLimit: 0
