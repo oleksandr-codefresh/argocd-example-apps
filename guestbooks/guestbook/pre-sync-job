@@ -4,7 +4,7 @@ metadata:
   generateName: wait-rollout-controller-to-pick-changes-
   annotations:
     argocd.argoproj.io/hook: Sync
-    argocd.argoproj.io/sync-wave: "2" # last wave of sync phase
+    argocd.argoproj.io/sync-wave: "2" # last wave of sync phases
 spec:
   template:
     spec:
