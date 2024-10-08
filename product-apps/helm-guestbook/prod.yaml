@@ -6,6 +6,7 @@ metadata:
     in-product: "true"
   annotations: 
     codefresh.io/product: hermes-guestbook
+    argocd.argoproj.io/manifest-generate-paths: .
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
 spec:
