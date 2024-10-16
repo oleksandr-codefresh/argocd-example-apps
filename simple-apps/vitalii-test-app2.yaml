@@ -7,9 +7,9 @@ metadata:
 spec:
   project: default
   source:
-    path: gitops/single-service
-    repoURL: https://github.com/vitalii-codefresh/simple-server.git
-    targetRevision: develop
+    path: apps
+    repoURL: https://github.com/oleksandr-codefresh/argocd-example-apps.git
+    targetRevision: alina
   destination:
     name: in-cluster
     namespace: default
