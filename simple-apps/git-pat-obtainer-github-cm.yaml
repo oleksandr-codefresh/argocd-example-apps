@@ -14,7 +14,7 @@ data:
       name: github-oauth2
       namespace: ' hermes'
       path:
-        appId: '1026255'
-        clientId: Iv23livY6UL5BRbo9Kic
-        clientSecret: 7ab710a6267139153ccfd636ae1be7b1e8ee6c18
-        url: https://github.com/apps/vitalii-gitops-app
+        appId: appId
+        clientId: clientId
+        clientSecret: clientSecret
+        url: url
