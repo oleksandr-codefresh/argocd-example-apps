@@ -12,7 +12,7 @@ data:
     appName: ''
     secret:
       name: github-oauth2
-      namespace: ' hermes'
+      namespace: hermes
       path:
         appId: appId
         clientId: clientId
