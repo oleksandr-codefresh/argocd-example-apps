@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: git-pat-obtainer-github
+  labels:
+    codefresh_io_entity: git-pat-obtainer
+    codefresh_io_git_provider: github
+data:
+  config: |
+    provider: github
+    mode: CUSTOM
+    appName: ''
+    secret:
+      name: github-oauth2
+      namespace: ' hermes'
+      path:
+        appId: '1026255'
+        clientId: Iv23livY6UL5BRbo9Kic
+        clientSecret: 7ab710a6267139153ccfd636ae1be7b1e8ee6c18
+        url: https://github.com/apps/vitalii-gitops-app
