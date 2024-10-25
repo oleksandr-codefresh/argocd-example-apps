@@ -67,6 +67,9 @@ spec:
             routes:
               - primary
       steps:
+        - setWeight: 0
+        - setCanaryScale:
+            weight: 0
         - setCanaryScale:
             weight: 50
         - setMirrorRoute:
