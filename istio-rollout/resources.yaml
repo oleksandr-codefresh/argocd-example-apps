@@ -88,7 +88,7 @@ spec:
     spec:
       containers:
         - name: istio-host-split
-          image: argoproj/rollouts-demo:green
+          image: argoproj/rollouts-demo:blue
           ports:
             - name: http
               containerPort: 8080
