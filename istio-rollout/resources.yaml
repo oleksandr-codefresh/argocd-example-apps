@@ -72,12 +72,34 @@ spec:
             weight: 0
         - setCanaryScale:
             weight: 50
+        - pause: {}
         - setMirrorRoute:
             name: mirror-route
             percentage: 50
             match:
               - method:
                   exact: POST
+                path:
+                  prefix: /color
+        - setHeaderRoute:
+            name: mirror-route
+            match:
+              - eaderName: AuthX
+                headerValue:
+                  prefix: hest-value
+        - setMirrorRoute:
+            name: mirror-route
+            percentage: 50
+            match:
+              - headers:
+                  test:
+                    exact: extest
+                  test2:
+                    regex: regtest
+                  test2:
+                    prefix: prestest
+                method:
+                  regex: POST
                 path:
                   prefix: /color
         - pause: {}
