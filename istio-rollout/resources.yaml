@@ -87,6 +87,9 @@ spec:
               - headerName: AuthXAuthXAuthXAuthXAuthXAuthXAuthXAuthX
                 headerValue:
                   prefix: hest-valuehest-valuehest-valuehest-valuehest-valuehest-value
+              - headerName: 2222222222
+                headerValue:
+                  prefix: 2222hest-valuehest-valuehest-valuehest-valuehest-valuehest-value
         - setMirrorRoute:
             name: mirror-routemirror-routemirror-routemirror-routemirror-routemirror-route
             percentage: 50
@@ -102,6 +105,17 @@ spec:
                   regex: POSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOST
                 path:
                   prefix: /color/color/color/color/color/color
+              - headers:
+                  test:
+                    exact: 2222extestextestextestextestextestextestextest
+                  test2:
+                    regex: 2222regtestregtestregtestregtestregtestregtestregtest
+                  test2:
+                    prefix: 2222prestestprestestprestestprestestprestestprestestprestest
+                method:
+                  regex: 2222POSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOSTPOST
+                path:
+                  prefix: 2222/color/color/color/color/color/color
         - pause: {}
   selector:
     matchLabels:
