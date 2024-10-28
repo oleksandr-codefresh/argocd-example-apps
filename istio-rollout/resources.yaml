@@ -84,7 +84,7 @@ spec:
         - setHeaderRoute:
             name: mirror-route
             match:
-              - eaderName: AuthX
+              - headerName: AuthX
                 headerValue:
                   prefix: hest-value
         - setMirrorRoute:
