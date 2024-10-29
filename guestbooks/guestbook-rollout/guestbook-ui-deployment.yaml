@@ -14,10 +14,11 @@ spec:
       labels:
         app: guestbook-ui-2
     spec:
-      restartPolicy: Never
+      restartPolicy: OnFailure
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.22
-        name: guestbook-ui-2
-        ports:
-        - containerPort: 80
+      - name: sleep
+        image: alpine:3.8
+        command: [sh, -c]
+        args: [exit 1]
+      restartPolicy: Never
             
