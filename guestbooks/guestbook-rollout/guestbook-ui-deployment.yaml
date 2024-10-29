@@ -19,11 +19,4 @@ spec:
         name: guestbook-ui-2
         ports:
         - containerPort: 80
-        volumeMounts:
-        - mountPath: "/usr/share/nginx/html"
-          name: storage
-      volumes:
-      - name: storage
-      persistentVolumeClaim:
-          claimName: your-pvc
             
