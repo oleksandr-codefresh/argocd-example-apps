@@ -1,22 +1,22 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: guestbook-ui-2
-spec:
-  progressDeadlineSeconds: 60
-  replicas: 1
-  revisionHistoryLimit: 2
-  selector:
-    matchLabels:
-      app: guestbook-ui-2
-  template:
-    metadata:
-      labels:
-        app: guestbook-ui-2
-    spec:
-      containers:
-      - name: sleep
-        image: alpine:3.8
-        command: [sh, -c]
-        args: [exit 1]
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: guestbook-ui-2
+# spec:
+#   progressDeadlineSeconds: 60
+#   replicas: 1
+#   revisionHistoryLimit: 2
+#   selector:
+#     matchLabels:
+#       app: guestbook-ui-2
+#   template:
+#     metadata:
+#       labels:
+#         app: guestbook-ui-2
+#     spec:
+#       containers:
+#       - name: sleep
+#         image: alpine:3.8
+#         command: [sh, -c]
+#         args: [exit 1]
             
