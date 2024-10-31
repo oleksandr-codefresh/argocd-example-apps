@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: sleep
-        image: alpine:3.7
+        image: alpine:3.8
         imagePullPolicy: Never
         command: [sh, -c]
-        args: [exit 1]
+        args: [exit 0]
             
