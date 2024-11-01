@@ -1,13 +1,23 @@
 # Default values for helm-guestbook.
 # This is a YAML-formatted file.
-# Declare variables to be passed into your templates.s
+# Declare variables to be passed into your templates.dsddsdsd
 
 replicaCount: 1
 
 image:
   repository: xeonalex/guesbook
-  tag: 0.2
+  tag: 0.1
   pullPolicy: IfNotPresent
+img: {}
+img2: {
+  tag: 2
+}
+
+img3: 
+  - name: sd
+    tag: '2.3'
+  - name: cm
+    tag: '0.23.1'
 
 service:
   type: ClusterIP
@@ -15,8 +25,7 @@ service:
 
 ingress:
   enabled: false
-  annotations:
-    {}
+  annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
@@ -27,8 +36,7 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources:
-  {}
+resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
