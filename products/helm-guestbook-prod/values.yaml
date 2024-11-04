@@ -1,12 +1,12 @@
 # Default values for helm-guestbook.
 # This is a YAML-formatted file.
-# Declare variables to be passed into your templates.dsds ---  dsssss
+# Declare variables to be passed into your templates.dsds ---  ssdsdcccc
 
 replicaCount: 1
 
 image:
   repository: xeonalex/guesbook
-  tag: 0.1
+  tag: 0.2
   pullPolicy: IfNotPresent
 img: {}
 img2: {
