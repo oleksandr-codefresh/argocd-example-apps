@@ -19,10 +19,10 @@ spec:
     name: in-cluster
     namespace: app-resources-dev
   syncPolicy:
-    # automated:
-    #   allowEmpty: true
-    #   prune: true
-      # selfHeal: true
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
     retry: {}
     syncOptions:
       - PrunePropagationPolicy=foreground
