@@ -17,7 +17,11 @@ spec:
       #   templates:
       #     - templateName: background
       steps:
-        - pause: {duration: 15}
+        - setWeight: 20
+        - pause:
+            duration: 5s
+        - setWeight: 100
+        # - pause: {duration: 15}
 
         # - setWeight: 10
         # - analysis:
@@ -26,9 +30,9 @@ spec:
         # - analysis:
         #     templates:
         #     - templateName: fail
-        - setWeight: 50
-        - pause:
-            duration: 50
+        # - setWeight: 50
+        # - pause:
+        #     duration: 50
 
         # - analysis:
         #     args:
@@ -81,9 +85,9 @@ spec:
         #         #       name: test-secret
         #         #       key: password
         # - pause: {duration: 50}
-        - analysis:
-            templates:
-            - templateName: star-w-template-1
+        # - analysis:
+        #     templates:
+        #     - templateName: star-w-template-1
         # - analysis:
         #     args:
         #       - name: verificationStatusMetric
@@ -105,7 +109,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
