@@ -55,7 +55,7 @@ spec:
         - analysis:
             templates:
             - templateName: star-w-template-1
-        - pause: {duration: 20}
+        - pause: {duration: 60}
         - analysis:
             templates:
             - templateName: star-w-template-1
@@ -80,7 +80,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.1
+          image: xeonalex/guesbook:0.2
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
