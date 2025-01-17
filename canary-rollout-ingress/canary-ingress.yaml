@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: canary-demo
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: 100M
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    #ingress.kubernetes.io/app-root: /
+    #kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: non-prod-ue1-e2e-1.cf-op.com
+    http:
+      paths:
+      - path: /canary-demo
+        pathType: Prefix
+        backend:
+          service:
+            name: canary-demo
+            port: 
+              name: http

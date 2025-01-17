@@ -1,4 +1,0 @@
-image:
-  repository: xeonalex/guesbook
-  tag: 0.3
-  pullPolicy: IfNotPresent

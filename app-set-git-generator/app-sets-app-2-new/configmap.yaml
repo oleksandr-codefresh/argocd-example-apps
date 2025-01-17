@@ -1,6 +1,0 @@
-apiVersion: v1
-data:
-  key: dsdssd #sddddsss
-kind: ConfigMap
-metadata:
-  name: app-2-cf
