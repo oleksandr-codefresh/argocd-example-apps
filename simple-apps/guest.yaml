@@ -15,7 +15,7 @@ spec:
   source:
     path: helm-guestbook
     repoURL: https://github.com/oleksandr-codefresh/argocd-example-apps
-    targetRevision: personal-eks
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
