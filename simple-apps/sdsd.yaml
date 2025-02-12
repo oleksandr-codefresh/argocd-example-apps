@@ -3,6 +3,7 @@ kind: WorkflowTemplate
 metadata:
   name: argo-hub.argocd.0.0.1
   annotations:
+    sasdas: dsdsd
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Templates that execute operations against an ArgoCD application'
     argo-hub/license: 'MIT'
