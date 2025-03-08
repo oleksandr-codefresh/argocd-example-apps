@@ -17,12 +17,12 @@ spec:
       #     - templateName: mixed-roll-tests
       #   startingStep: 1
       steps:
-        - pause: {duration: 5000s}
+        - pause: {duration: 15s}
         - analysis:
             templates:
             - templateName: mixed-roll-tests
         - setWeight: 50
-        - pause: {duration: 4200s}
+        - pause: {duration: 42s}
         
   selector:
     matchLabels:
