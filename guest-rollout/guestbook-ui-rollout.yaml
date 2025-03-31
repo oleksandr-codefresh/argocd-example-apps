@@ -22,7 +22,7 @@ spec:
         #     templates:
         #     - templateName: mixed-roll-tests
         - setWeight: 50
-        - pause: {duration: 15s}
+        # - pause: {duration: 15s}
         
   selector:
     matchLabels:
