@@ -18,6 +18,7 @@ spec:
       #   startingStep: 1
       steps:
         - pause: {duration: 45s}
+        - pause: {}
         - analysis:
             templates:
             - templateName: mixed-roll-tests
