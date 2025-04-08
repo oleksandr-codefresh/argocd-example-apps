@@ -18,12 +18,12 @@ spec:
       #     - templateName: background
       steps:
         - pause:
-            duration: 5s
+            duration: 100s
         - setWeight: 20
         - pause:
-            duration: 30s
+            duration: 100s
         - pause:
-            duration: 30s
+            duration: 100s
         - setWeight: 100
         # - pause: {duration: 15}
 
