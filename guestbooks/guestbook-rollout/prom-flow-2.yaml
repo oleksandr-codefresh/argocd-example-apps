@@ -5,7 +5,7 @@ metadata:
   annotations:
     version: 0.0.1
     description: Flow to show parallel deployment
-    test: ddddddd
+    test: dddddddsss
     argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   triggerEnvironment: dev
