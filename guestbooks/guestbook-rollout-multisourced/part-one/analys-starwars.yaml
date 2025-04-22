@@ -24,6 +24,7 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: star-w-template-15
+  labels: tess
 spec:
   metrics:
   - name: starw-api-2
