@@ -17,13 +17,13 @@ spec:
       #     - templateName: mixed-roll-tests
       #   startingStep: 1
       steps:
-        - pause: {duration: 100s}
+        - pause: {duration: 20s}
+        - setWeight: 50
         - analysis:
             templates:
             - templateName: mixed-roll-tests
-        - pause: {}
-        - setWeight: 50
-        - pause: {duration: 100s}
+        # - pause: {}
+        # - pause: {duration: 100s}
         
   selector:
     matchLabels:
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3000
               protocol: TCP
