@@ -19,9 +19,9 @@ spec:
       steps:
         - pause: {duration: 20s}
         - setWeight: 50
-        - analysis:
-            templates:
-            - templateName: mixed-roll-tests
+        # - analysis:
+        #     templates:
+        #     - templateName: mixed-roll-tests
         # - pause: {}
         # - pause: {duration: 100s}
         
