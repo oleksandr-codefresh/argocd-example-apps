@@ -18,6 +18,10 @@ spec:
       #   startingStep: 1
       steps:
         - pause: {duration: 20s}
+        - pause: {duration: 20s}
+        - pause: {duration: 20s}
+        - pause: {duration: 20s}
+        - pause: {duration: 20s}
         - setWeight: 50
         # - analysis:
         #     templates:
