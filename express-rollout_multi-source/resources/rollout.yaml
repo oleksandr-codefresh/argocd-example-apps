@@ -5,7 +5,7 @@ metadata:
   labels:
     somelb: some
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 1
   selector:
     matchLabels:

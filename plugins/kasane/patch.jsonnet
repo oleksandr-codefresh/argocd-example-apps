@@ -3,7 +3,7 @@ function (layers)
 [
   layers[0] {
     spec+: {
-      replicas: 2,
+      replicas: 1,
     },
   }
 ]

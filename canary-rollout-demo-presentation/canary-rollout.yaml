@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: canary-rollout
 spec:
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 1
   selector:
     matchLabels:
@@ -49,7 +49,7 @@ spec:
             templates:
             - templateName: step-analysis
         - setCanaryScale:
-            replicas: 2
+            replicas: 1
         - setWeight: 50
         - pause: { duration: 30 }
         - experiment:
