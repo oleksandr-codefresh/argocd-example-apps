@@ -17,14 +17,14 @@ spec:
       #   templates:
       #     - templateName: background
       steps:
-        - setWeight: 20
+        - setWeight: 31
         - pause:
-            duration: 20s
+            duration: 60s
         # - pause:
         #     duration: 100s
         # - pause:
         #     duration: 100s
-        - setWeight: 100
+        - setWeight: 71
         # - pause: {duration: 15}
 
         # - setWeight: 10
