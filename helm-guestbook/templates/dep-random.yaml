@@ -17,4 +17,4 @@ spec:
       - name: sleep-fail
         image: alpine:3.8
         command: [sh, -c]
-        args: [FLIP=$(($(($RANDOM%10))%2)) && exit $FLIP]
+        args: [FLIP=$(($RANDOM % 100)) && exit $(($FLIP < 25))]
