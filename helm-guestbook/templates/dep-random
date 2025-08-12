@@ -21,7 +21,7 @@ spec:
           - |
             FLIP=$(($RANDOM % 100))
             if [ $FLIP -lt 50 ]; then
-              sleep 100
+              sleep 15
             else
               exit 1
             fi
