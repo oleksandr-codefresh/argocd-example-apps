@@ -18,4 +18,4 @@ spec:
         image: alpine:3.8
         command: [sh, -c]
         args: [FLIP=$(($(($RANDOM%10))%2)) && exit $FLIP]
-      restartPolicy: Never
+        restartPolicy: Never
