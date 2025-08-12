@@ -20,7 +20,7 @@ spec:
         args:
           - |
             FLIP=$(($RANDOM % 100))
-            if [ $FLIP -lt 75 ]; then
+            if [ $FLIP -lt 50 ]; then
               sleep 100
             else
               exit 1
