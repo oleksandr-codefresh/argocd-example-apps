@@ -16,5 +16,12 @@ spec:
       containers:
       - name: sleep-fail
         image: alpine:3.8
-        command: [sh, -c]
-        args: [FLIP=$(($RANDOM % 100)) && exit $(($FLIP < 25))]
+        command: ["sh", "-c"]
+        args:
+          - |
+            FLIP=$(($RANDOM % 100))
+            if [ $FLIP -lt 75 ]; then
+              sleep 100
+            else
+              exit 1
+            fi
