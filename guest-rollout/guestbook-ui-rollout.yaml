@@ -20,7 +20,7 @@ spec:
         # - pause: {duration: 10}
         - setWeight: 50
         - pause: {duration: 50s}
-        # - pause: {duration: 20s}
+        - pause: {duration: 20s}
         # - pause: {duration: 20s}
         # - pause: {duration: 20s}
         - setWeight: 50
