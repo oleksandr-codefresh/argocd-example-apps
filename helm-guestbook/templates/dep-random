@@ -1,27 +1,27 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-    name: rand-{{ template "helm-guestbook.fullname" . }}
-spec:
-  replicas: 3
-  revisionHistoryLimit: 3
-  selector:
-    matchLabels:
-      app: guestbook-ui
-  template:
-    metadata:
-      labels:
-        app: guestbook-ui
-    spec:
-      containers:
-      - name: sleep-fail
-        image: alpine:3.8
-        command: ["sh", "-c"]
-        args:
-          - |
-            FLIP=$(($RANDOM % 100))
-            if [ $FLIP -lt 50 ]; then
-              sleep 15
-            else
-              exit 1
-            fi
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#     name: rand-{{ template "helm-guestbook.fullname" . }}
+# spec:
+#   replicas: 3
+#   revisionHistoryLimit: 3
+#   selector:
+#     matchLabels:
+#       app: guestbook-ui
+#   template:
+#     metadata:
+#       labels:
+#         app: guestbook-ui
+#     spec:
+#       containers:
+#       - name: sleep-fail
+#         image: alpine:3.8
+#         command: ["sh", "-c"]
+#         args:
+#           - |
+#             FLIP=$(($RANDOM % 100))
+#             if [ $FLIP -lt 50 ]; then
+#               sleep 15
+#             else
+#               exit 1
+#             fi
