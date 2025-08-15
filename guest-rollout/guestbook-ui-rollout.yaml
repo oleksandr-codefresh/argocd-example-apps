@@ -19,7 +19,7 @@ spec:
       steps:
         # - pause: {duration: 10}
         - setWeight: 50
-        - pause: {duration: 50s}
+        # - pause: {duration: 50s}
         - pause: {duration: 20s}
         # - pause: {duration: 20s}
         # - pause: {duration: 20s}
@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
         - name: express-microservice
-          image: xeonalex/guesbook:0.3
+          image: xeonalex/guesbook:0.1
           ports:
             - containerPort: 3000
               protocol: TCP
