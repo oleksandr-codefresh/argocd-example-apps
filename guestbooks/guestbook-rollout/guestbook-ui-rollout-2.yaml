@@ -18,7 +18,7 @@ spec:
       #     - templateName: background
       steps:
         - setWeight: 31
-        - pause: {}
+        # - pause: {}
         # - pause:
         #     duration: 20s
         # - pause:
