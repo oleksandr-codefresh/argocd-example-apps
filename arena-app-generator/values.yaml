@@ -1,0 +1,13 @@
+runtimeName: 'arena-10'
+spec:
+  baseRepoUrl: https://github.com/oleksandr-codefresh/argo-load-product
+  dev:
+    suffix: dev
+    path: dev
+  prod:
+    suffix: prod
+    path: prod
+clusters:
+  - name: in-cluster
+    devApp: 25
+    prodApp: 20

@@ -1,0 +1,77 @@
+{{- range .Values.clusters }}
+  {{- $cluster := . }}
+  {{- range $i, $e := until (int $cluster.devApp) }}
+    {{- $idx := add $i 1 }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ printf "%s-to-%s-app-%d-%s" $.Values.runtimeName $cluster.name $idx $.Values.spec.dev.suffix }}
+  annotations:
+    codefresh.io/product: jupiter-new
+  labels:
+    cf.load-test: "true"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/foreground
+spec:
+  project: default
+  source:
+    path: {{ $.Values.spec.dev.path }}
+    repoURL: {{ printf "%s-%d" $.Values.spec.baseRepoUrl (mod $idx 10) }}
+    targetRevision: HEAD
+  destination:
+    name: {{ $cluster.name }}
+    namespace: scale-test
+  syncPolicy:
+    automated:
+      prune: true
+      # selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=false
+      - Validate=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=false
+      - ServerSideApply=false
+      - RespectIgnoreDifferences=false
+---
+  {{- end }}
+  {{- range $i, $e := until (int $cluster.prodApp) }}
+    {{- $idx := add $i 1 }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ printf "%s-to-%s-app-%d-%s" $.Values.runtimeName $cluster.name $idx $.Values.spec.prod.suffix }}
+  annotations:
+    codefresh.io/product: jupiter-new
+  labels:
+    cf.load-test: "true"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/foreground
+spec:
+  project: default
+  source:
+    path: {{ $.Values.spec.prod.path }}
+    repoURL: {{ printf "%s-%d" $.Values.spec.baseRepoUrl (mod $idx 10) }}
+    targetRevision: HEAD
+  destination:
+    name: {{ $cluster.name }}
+    namespace: scale-test
+  syncPolicy:
+    automated:
+      prune: true
+      # selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=false
+      - Validate=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=false
+      - ServerSideApply=false
+      - RespectIgnoreDifferences=false
+---
+  {{- end }}
+{{- end }}
