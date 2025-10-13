@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rollout-test-4
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 3
   strategy:
     canary:
@@ -17,11 +17,12 @@ spec:
       #     - templateName: mixed-roll-tests
       #   startingStep: 1
       steps:
+        # - pause: {duration: 10}
+        - setWeight: 50
+        # - pause: {duration: 50s}
         - pause: {duration: 20s}
-        - pause: {duration: 20s}
-        - pause: {duration: 20s}
-        - pause: {duration: 20s}
-        - pause: {duration: 20s}
+        # - pause: {duration: 20s}
+        # - pause: {duration: 20s}
         - setWeight: 50
         # - analysis:
         #     templates:

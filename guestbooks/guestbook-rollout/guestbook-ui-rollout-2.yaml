@@ -17,14 +17,15 @@ spec:
       #   templates:
       #     - templateName: background
       steps:
-        - setWeight: 20
-        - pause:
-            duration: 20s
+        - setWeight: 31
+        # - pause: {}
+        # - pause:
+        #     duration: 20s
         # - pause:
         #     duration: 100s
         # - pause:
         #     duration: 100s
-        - setWeight: 100
+        - setWeight: 71
         # - pause: {duration: 15}
 
         # - setWeight: 10
@@ -113,7 +114,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.3
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
