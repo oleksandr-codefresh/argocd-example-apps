@@ -21,11 +21,12 @@ spec:
         # - pause: {}
         - pause:
             duration: 30s
-        # - pause:
-        #     duration: 100s
-        # - pause:
-        #     duration: 100s
+        # - setWeight: 51
         - setWeight: 71
+        # - pause:
+        #     duration: 100s
+        # - pause:
+        #     duration: 100s
         # - pause: {duration: 15}
 
         # - setWeight: 10
