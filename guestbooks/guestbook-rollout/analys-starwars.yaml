@@ -102,7 +102,7 @@ spec:
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: background
+  name: pass-always-t
 spec:
   metrics:
   - name: pass-always
