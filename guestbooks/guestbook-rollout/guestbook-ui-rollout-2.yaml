@@ -21,7 +21,7 @@ spec:
         # - pause: {}
         - analysis:
             templates:
-            - templateName: pass-always
+              - templateName: pass-always
         - pause:
             duration: 30s
         - pause:
