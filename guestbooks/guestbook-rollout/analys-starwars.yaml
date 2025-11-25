@@ -119,7 +119,7 @@ spec:
                 image: alpine:3.8
                 command: [sh, -c]
                 args:
-                  - echo "URL: https://example.com/api/v1/resources";
+                  - echo "URL https://example.com/api/v1/resources";
                     echo "Job completed successfully";
                     exit 0
               restartPolicy: Never
