@@ -118,7 +118,10 @@ spec:
               - name: sleep
                 image: alpine:3.8
                 command: [sh, -c]
-                args: [exit 0]
+                args:
+                  - echo "URL: https://example.com/api/v1/resources";
+                    echo "Job completed successfully";
+                    exit 0
               restartPolicy: Never
           backoffLimit: 0
 ---

@@ -18,7 +18,10 @@ spec:
       #     - templateName: background
       steps:
         # - setWeight: 31
-        - pause: {}
+        # - pause: {}
+        - analysis:
+            templates:
+            - templateName: pass-always
         - pause:
             duration: 30s
         - pause:
@@ -32,9 +35,7 @@ spec:
         # - pause: {duration: 15}
 
         # - setWeight: 10
-        # - analysis:
-        #     templates:
-        #     - templateName: star-w-template-3-inconclusive
+
         # - analysis:
         #     templates:
         #     - templateName: fail
