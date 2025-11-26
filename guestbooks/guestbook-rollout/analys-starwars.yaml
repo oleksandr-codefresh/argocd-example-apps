@@ -58,7 +58,7 @@ spec:
     failureLimit: 5
     provider:
       web:
-        url: "http://canary-demo.{{args.namespace}}:8080"
+        url: "http://canary-demo.{{args.namespace}}:80"
         timeoutSeconds: 20 # defaults to 10 seconds
 ---
 kind: AnalysisTemplate
