@@ -48,6 +48,8 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: canary-demo
 spec:
+  args:
+  - name: service-name
   metrics:
   - name: simple-http
     count: 15
