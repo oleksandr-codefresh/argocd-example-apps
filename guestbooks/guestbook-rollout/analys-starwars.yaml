@@ -46,6 +46,22 @@ spec:
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
+  name: canary-demo
+spec:
+  metrics:
+  - name: simple-http
+    count: 15
+    interval: 5s
+    # failureCondition: result != '2'
+    failureLimit: 5
+    provider:
+      web:
+        url: http://canary-demo:80
+        timeoutSeconds: 20 # defaults to 10 seconds
+---
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
   name: star-w-template-var-metric
   labels:
     env: test
