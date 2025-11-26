@@ -30,13 +30,13 @@ spec:
       steps:
         - setWeight: 33
         - analysis:
-          templates:
-            - templateName: canary-demo
-          args:
-            - name: namespace
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
+            templates:
+              - templateName: canary-demo
+            args:
+              - name: namespace
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.namespace
         - pause:
             duration: 300s
         - setWeight: 66
