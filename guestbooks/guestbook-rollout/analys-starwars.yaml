@@ -52,8 +52,8 @@ spec:
   - name: namespace
   metrics:
   - name: simple-http
-    count: 15
-    interval: 5s
+    count: 6
+    interval: 15s
     # failureCondition: result != '2'
     failureLimit: 5
     provider:
