@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: canary-demo
-          image: docker.io/testcodefresh/rollouts-demo:green
+          image: docker.io/testcodefresh/rollouts-demo:purple
           imagePullPolicy: Always
           ports:
             - name: http
@@ -29,6 +29,9 @@ spec:
     canary:
       steps:
         - setWeight: 33
+        - analysis:
+            templates:
+              - templateName: canary-demo
         - pause:
             duration: 300s
         - setWeight: 66
