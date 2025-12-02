@@ -24,8 +24,7 @@ spec:
         #       - templateName: pass-always-t
         - pause:
             duration: 5s
-        - pause:
-            duration: 60s
+        # - pause: {}
         # - setWeight: 51
         # - setWeight: 71
         # - pause:
