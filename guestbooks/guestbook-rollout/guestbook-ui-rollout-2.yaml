@@ -24,8 +24,8 @@ spec:
         #       - templateName: pass-always-t
         - pause:
             duration: 5s
-        # - pause:
-        #     duration: 60s
+        - pause:
+            duration: 60s
         # - setWeight: 51
         # - setWeight: 71
         # - pause:
@@ -118,7 +118,7 @@ spec:
     spec:
       containers:
         - name: express-microservice2
-          image: xeonalex/guesbook:0.2
+          image: xeonalex/guesbook:0.3
           # image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           ports:
             - containerPort: 3070
