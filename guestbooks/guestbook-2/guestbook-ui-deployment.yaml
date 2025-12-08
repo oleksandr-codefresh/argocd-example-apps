@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui-2 # sdssadsdsdsdsdsdsd
+  name: guestbook-ui-2 # sdssaddsdsdsdsdsdsdsd
 spec:
   progressDeadlineSeconds: 60
   replicas: 1
