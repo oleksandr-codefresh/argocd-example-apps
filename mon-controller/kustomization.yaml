@@ -3,4 +3,4 @@ kind: Kustomization
 
 namespace: rt-fork
 resources:
-- https://raw.githubusercontent.com/argoproj-labs/argocd-monorepo-controller/refs/heads/stable/manifests/install.yaml
+- https://raw.githubusercontent.com/argoproj-labs/argocd-monorepo-controller/refs/heads/main/manifests/install.yaml
