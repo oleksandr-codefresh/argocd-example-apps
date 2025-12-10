@@ -15,5 +15,22 @@ patchesJson6902:
       path: /subjects/0/namespace
       value: rt-fork
 
-components:
-- component/
+patchesStrategicMerge:
+- |
+  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    name: argocd-monorepo-controller-network-policy
+  $patch: delete
+- |
+  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    name: argocd-monorepo-repo-server-network-policy
+  $patch: delete
+- |
+  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    name: argocd-monorepo-repo-server-redis-network-policy.yaml
+  $patch: delete
