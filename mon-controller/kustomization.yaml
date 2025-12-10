@@ -15,15 +15,5 @@ patchesJson6902:
       path: /subjects/0/namespace
       value: rt-fork
 
-transformers:
-- |
-  apiVersion: builtin
-  kind: PatchTransformer
-  metadata:
-    name: remove-network-policies
-  patches:
-  - patch: |-
-      $patch: delete
-    target:
-      name: "mrc-argo.*"
-      kind: "NetworkPolicy"
+components:
+- component/
