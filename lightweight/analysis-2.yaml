@@ -2,7 +2,8 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: lightweight-2
-  # annotations:
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
     # argocd.argoproj.io/sync-options: Prune=confirm
     # argocd.argoproj.io/sync-options: Delete=confirm
 spec:
