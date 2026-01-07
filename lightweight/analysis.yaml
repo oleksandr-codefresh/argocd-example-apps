@@ -2,9 +2,9 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: lightweight
-  # annotations:
-  #   # argocd.argoproj.io/sync-options: Prune=confirm
-  #   argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+  annotations:
+    # argocd.argoproj.io/sync-options: Prune=confirm
+    argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
 spec:
   metrics:
   - name: starw-api-1
