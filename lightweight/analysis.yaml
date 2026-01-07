@@ -2,8 +2,8 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: lightweight
-  finalizers:
-    - resources-finalizer.test.io/foreground
+  # finalizers:
+  #   - resources-finalizer.test.io/foreground
   # annotations:
   #   # argocd.argoproj.io/sync-options: Prune=confirm
   #   argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
