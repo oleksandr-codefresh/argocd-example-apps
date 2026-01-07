@@ -4,9 +4,9 @@ metadata:
   name: lightweight
   # finalizers:
   #   - resources-finalizer.test.io/foreground
-  # annotations:
-  #   # argocd.argoproj.io/sync-options: Prune=confirm
-  #   argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+  annotations:
+    # argocd.argoproj.io/sync-options: Prune=confirm
+    argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
 spec:
   metrics:
   - name: starw-api-1
