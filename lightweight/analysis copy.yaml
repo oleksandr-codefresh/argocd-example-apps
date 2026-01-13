@@ -2,6 +2,8 @@ kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: lss
+  labels:
+    sadas: sd
   # finalizers:
   #   - resources-finalizer.test.io/foreground
 spec:
