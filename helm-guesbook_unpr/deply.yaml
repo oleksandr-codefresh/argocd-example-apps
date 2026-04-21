@@ -22,7 +22,7 @@ spec:
         - image: xeonalex/guesbook-unprivileged:0.2
           env:
             - name: TEST_VALUE
-              value: 
+              value: sddsfsdfsdf
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
