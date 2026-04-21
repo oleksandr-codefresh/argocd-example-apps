@@ -18,9 +18,9 @@ spec:
     spec:
       containers:
         - image: xeonalex/guesbook-unprivileged:0.2
-          env:                                                                                                                                                                                                           │
-          - name: TEST_VALUE                                                                                                                                                                                         │
-            value: #{ENV_VAR}
+          env:
+            - name: TEST_VALUE
+              value: #{ENV_VAR}
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
