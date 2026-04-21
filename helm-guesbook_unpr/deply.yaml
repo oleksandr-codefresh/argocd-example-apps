@@ -19,8 +19,8 @@ spec:
       containers:
         - image: xeonalex/guesbook-unprivileged:0.2
           env:                                                                                                                                                                                                           │
-            - name: TEST_VALUE                                                                                                                                                                                         │
-              value: MY_TEST_VALUE-SDSDSD
+          - name: TEST_VALUE
+            value: MY_TEST_VALUE-SDSDSD
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
