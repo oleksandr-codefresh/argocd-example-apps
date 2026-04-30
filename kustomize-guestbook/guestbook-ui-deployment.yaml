@@ -17,4 +17,6 @@ spec:
       - image: xeonalex/guesbook-unprivileged:0.1
         name: guestbook-ui
         ports:
-        - containerPort: 8080
+          - name: http
+            containerPort: 8080
+            protocol: TCP
