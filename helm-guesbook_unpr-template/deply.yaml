@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-unpriv
+  name: guestbook-unpriv
   annotations:
     octopus-release-number: #{Octopus.Release.Number}
 spec:
