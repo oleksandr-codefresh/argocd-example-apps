@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: xeonalex/guesbook:0.1
+      - image: xeonalex/guesbook-unprivileged:0.1
         name: guestbook-ui
         ports:
-        - containerPort: 80
+        - containerPort: 8080
