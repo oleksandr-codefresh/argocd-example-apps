@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-unpriv
+  name: guestbook-unpriv-2
   annotations:
     octopus-release-number: 0.0.1
 spec:
