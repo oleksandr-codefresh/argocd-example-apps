@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         # - image: xeonalex/guesbook-unprivileged:0.2
-        - image: nginxinc/nginx-unprivileged:alpine-perl
+        - image: nginxinc/nginx-unprivileged:alpine
           env:
             - name: TEST_VALUE
               value: iiiiii
