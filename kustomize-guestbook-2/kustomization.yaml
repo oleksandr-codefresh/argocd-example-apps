@@ -8,3 +8,5 @@ kind: Kustomization
 images:
 - name: xeonalex/guesbook-unprivileged
   newTag: "v0.3.1"
+- name: xeonalex/guesbook
+  newTag: "v0.1.1"
