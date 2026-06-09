@@ -7,5 +7,5 @@ bases:
 patchesStrategicMerge:
 - config-map.yaml
 images:
-  - name: xeonalex/guesbook-unprivileged
-    newTag: "v0.1.0"
+- name: xeonalex/guesbook-unprivileged
+  newTag: "v0.1.0"
