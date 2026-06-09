@@ -9,4 +9,4 @@ patchesStrategicMerge:
 - config-map.yaml
 images:
 - name: xeonalex/guesbook-unprivileged
-  newTag: "v0.1.0"
+  newTag: "7282b63"
