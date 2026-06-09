@@ -1,0 +1,14 @@
+kustomize-bug/overlays/staging/kustomization.yaml
+  h_1903a5d928fbe4 12-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "1addaecd488857cebb5e8eea9728a4877ec0ea1c",
+  "prompts": {},
+  "humans": {
+    "h_1903a5d928fbe4": {
+      "author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    }
+  }
+}
