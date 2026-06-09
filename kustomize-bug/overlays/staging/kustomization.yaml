@@ -20,4 +20,4 @@ patches:
 
 images:
   - name: xeonalex/guesbook-unprivileged
-    newTag: "latest"
+    newTag: "v0.3.1"
