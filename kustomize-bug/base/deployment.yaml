@@ -16,7 +16,7 @@ spec:
         image: gcr.io/cloud-marketplace/google/nginx1
         ports:
         - containerPort: 80
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         env:
         - name: MY_MYSQL_DB
           valueFrom:
