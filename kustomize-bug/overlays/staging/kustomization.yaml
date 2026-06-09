@@ -1,0 +1,11 @@
+kind: Kustomization
+namePrefix: staging-
+commonLabels:
+  variant: staging
+bases:
+- ../../base
+patchesStrategicMerge:
+- config-map.yaml
+images:
+  - name: xeonalex/guesbook
+    newTag: "v0.1"
