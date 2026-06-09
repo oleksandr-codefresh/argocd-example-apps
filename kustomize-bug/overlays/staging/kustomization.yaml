@@ -19,5 +19,7 @@ patches:
         value: 1
 
 images:
+  - name: xeonalex/guesbook
+    newTag: "0.1"
   - name: xeonalex/guesbook-unprivileged
     newTag: "v0.3.1"
