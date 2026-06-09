@@ -8,4 +8,4 @@ patchesStrategicMerge:
 - config-map.yaml
 images:
   - name: xeonalex/guesbook
-    newTag: "v0.1"
+    newTag: "v0.1.0"
