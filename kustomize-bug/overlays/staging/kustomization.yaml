@@ -11,4 +11,4 @@ patchesStrategicMerge:
 
 images:
   - name: xeonalex/guesbook-unprivileged
-    newTag: "7282b63"
+    newTag: "latest"
