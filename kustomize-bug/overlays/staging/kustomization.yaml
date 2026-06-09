@@ -5,8 +5,10 @@ commonLabels:
   variant: staging
 bases:
 - ../../base
+
 patchesStrategicMerge:
 - config-map.yaml
+
 images:
-- name: xeonalex/guesbook-unprivileged
-  newTag: "7282b63"
+  - name: xeonalex/guesbook-unprivileged
+    newTag: "7282b63"
