@@ -9,6 +9,15 @@ bases:
 patchesStrategicMerge:
 - config-map.yaml
 
+patches:
+  - target:
+      kind: Deployment
+      name: the-deployment
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 1
+
 images:
   - name: xeonalex/guesbook-unprivileged
     newTag: "latest"
