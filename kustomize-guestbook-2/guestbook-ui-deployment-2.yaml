@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui-2
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui-2
+  template:
+    metadata:
+      labels:
+        app: guestbook-ui-2
+    spec:
+      containers:
+      - image: xeonalex/guesbook
+        name: guestbook-ui-2
+        ports:
+          - name: http
+            containerPort: 80
+            protocol: TCP
