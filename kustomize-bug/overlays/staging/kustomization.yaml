@@ -25,4 +25,4 @@ images:
   - name: docker.io/xeonalex/guesbook
     newTag: "0.1"
   - name: docker.io/xeonalex/guesbook-unprivileged
-    newTag: "v0.3.0"
+    newTag: "v0.3.1"
