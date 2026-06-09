@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: the-container
-        image: registry.k8s.io/ingress-nginx/controller
+        image: gcr.io/cloud-marketplace/google/nginx1
         ports:
         - containerPort: 80
         imagePullPolicy: Always

@@ -24,5 +24,5 @@ patches:
 images:
   - name: docker.io/xeonalex/guesbook
     newTag: "v0.3.0"
-  - name: registry.k8s.io/ingress-nginx/controller
-    newTag: "v1.12.1"
+  - name: gcr.io/cloud-marketplace/google/nginx1
+    newTag: "latest"
