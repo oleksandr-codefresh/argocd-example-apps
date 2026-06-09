@@ -25,4 +25,4 @@ images:
   - name: xeonalex/guesbook
     newTag: "0.1"
   - name: xeonalex/guesbook-unprivileged
-    newTag: "latest"
+    newTag: "v0.3.1"
