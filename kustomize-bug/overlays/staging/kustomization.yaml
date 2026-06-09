@@ -22,7 +22,7 @@ patches:
         value: 1
 
 images:
-  - name: xeonalex/guesbook
+  - name: docker.io/xeonalex/guesbook
     newTag: "0.1"
-  - name: xeonalex/guesbook-unprivileged
+  - name: docker.io/xeonalex/guesbook-unprivileged
     newTag: "latest"

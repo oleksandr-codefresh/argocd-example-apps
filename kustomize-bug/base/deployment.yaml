@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: the-container
-        image: xeonalex/guesbook-unprivileged
+        image: docker.io/xeonalex/guesbook-unprivileged
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
