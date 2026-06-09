@@ -1,11 +1,14 @@
 kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
 namePrefix: staging-
 commonLabels:
   variant: staging
 bases:
 - ../../base
+
 patchesStrategicMerge:
 - config-map.yaml
+
 images:
-  - name: xeonalex/guesbook
-    newTag: "v0.1"
+  - name: xeonalex/guesbook-unprivileged
+    newTag: "latest"
