@@ -13,9 +13,9 @@ spec:
     spec:
       containers:
       - name: the-container
-        image: docker.io/xeonalex/guesbook-unprivileged
+        image: registry.k8s.io/ingress-nginx/controller
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         imagePullPolicy: Always
         env:
         - name: MY_MYSQL_DB
