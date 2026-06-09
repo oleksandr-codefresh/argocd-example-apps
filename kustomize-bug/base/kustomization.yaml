@@ -10,5 +10,5 @@ resources:
 - configMap.yaml
 
 images:
-  - name: xeonalex/guesbook
+  - name: xeonalex/guesbook-unprivileged
     newTag: "v0.1"
