@@ -23,6 +23,6 @@ patches:
 
 images:
   - name: docker.io/xeonalex/guesbook
-    newTag: "0.1"
+    newTag: "v0.3.0"
   - name: docker.io/xeonalex/guesbook-unprivileged
-    newTag: "sb-zuyesdf"
+    newTag: "v0.3.0"
