@@ -17,6 +17,8 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: IfNotPresent
+        imagePullSecrets:
+          - name: acr-secret
         env:
         - name: MY_MYSQL_DB
           valueFrom:
