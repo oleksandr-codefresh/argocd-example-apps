@@ -1,0 +1,28 @@
+helm-guestbook/templates/log-printer-job.yaml
+  s_c9b5b6fdc2afe3::t_09d6f14fc8dfb2 27,30-32,36
+  s_13b771aa440f05::t_d2d798891ddc54 26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "85d16924851875161b8307087ea752daa1db0329",
+  "prompts": {},
+  "sessions": {
+    "s_13b771aa440f05": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1782200220540",
+        "model": "unknown"
+      },
+      "human_author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    },
+    "s_c9b5b6fdc2afe3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4ef57f1a-34c9-4694-b825-2b2e7be92f47",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    }
+  }
+}
