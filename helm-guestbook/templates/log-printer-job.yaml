@@ -23,13 +23,19 @@ spec:
             - sh
             - -c
             - |
-              set -- alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima november oscar papa quebec romeo sierra tango uniform alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima november oscar papa quebec romeo sierra tango uniform alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima november oscar papa quebec romeo sierra tango uniform
+              set -- alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima november oscar papa quebec romeo sierra tango uniform whiskey xray yankee zulu apple banana cherry dragon eagle falcon glacier horizon iceberg jungle kingdom legend mountain nebula ocean pyramid quantum river sunset thunder umbrella volcano waterfall xenon yellow zenith aurora blizzard canyon desert ember forest galaxy harbor island jungle knight lantern meadow ninja orbit palace quest ridge shadow tunnel utopia valley wizard
               word_count=$#
               i=1
               while [ "$i" -le "$LOG_LINE_COUNT" ]; do
-                idx=$(( (RANDOM % word_count) + 1 ))
-                rand_word=$(eval "echo \${$idx}")
-                echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] log line $i of $LOG_LINE_COUNT $rand_word"
+                n=$(( (RANDOM % word_count) + 1 ))
+                words=""
+                j=1
+                while [ "$j" -le "$n" ]; do
+                  idx=$(( (RANDOM % word_count) + 1 ))
+                  words="$words $(eval "echo \${$idx}")"
+                  j=$((j + 1))
+                done
+                echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] log line $i of $LOG_LINE_COUNT$words"
                 i=$((i + 1))
                 [ "$i" -le "$LOG_LINE_COUNT" ] && sleep "$SLEEP_SECONDS"
               done
