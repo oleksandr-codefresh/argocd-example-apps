@@ -1,0 +1,27 @@
+helm-guestbook/values.yaml
+  h_1903a5d928fbe4 50,52
+  s_c9b5b6fdc2afe3::t_b6fb1c63b6eb3b 46-49,51,53-54
+helm-guestbook/templates/log-printer-job.yaml
+  s_c9b5b6fdc2afe3::t_d10a5984d26cfc 1-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "53f0f00cdbd15ee75ded71ddae363d4fd8798ab5",
+  "prompts": {},
+  "humans": {
+    "h_1903a5d928fbe4": {
+      "author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    }
+  },
+  "sessions": {
+    "s_c9b5b6fdc2afe3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4ef57f1a-34c9-4694-b825-2b2e7be92f47",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    }
+  }
+}
