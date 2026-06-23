@@ -7,10 +7,6 @@ metadata:
     app.kubernetes.io/name: {{ include "helm-guestbook.name" . }}
     helm.sh/chart: {{ include "helm-guestbook.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
-  annotations:
-    "helm.sh/hook": post-install,post-upgrade
-    "helm.sh/hook-weight": "0"
-    "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   ttlSecondsAfterFinished: {{ .Values.logPrinterJob.ttlSecondsAfterFinished }}
   template:
