@@ -1,0 +1,20 @@
+helm-guestbook/templates/log-printer-job.yaml
+  s_c9b5b6fdc2afe3::t_9328595d54ca2d 26
+  s_c9b5b6fdc2afe3::t_3d644dbb5cf8b1 30-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "513b416b51244eec294acae2cc247af383d48e22",
+  "prompts": {},
+  "sessions": {
+    "s_c9b5b6fdc2afe3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4ef57f1a-34c9-4694-b825-2b2e7be92f47",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    }
+  }
+}
