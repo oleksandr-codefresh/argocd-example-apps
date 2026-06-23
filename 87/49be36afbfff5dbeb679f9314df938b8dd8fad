@@ -1,0 +1,14 @@
+helm-guestbook/values.yaml
+  h_1903a5d928fbe4 52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "8749be36afbfff5dbeb679f9314df938b8dd8fad",
+  "prompts": {},
+  "humans": {
+    "h_1903a5d928fbe4": {
+      "author": "oleksandr-codefresh <oleksandr.saulyak@octopus.com>"
+    }
+  }
+}
