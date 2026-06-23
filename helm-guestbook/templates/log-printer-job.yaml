@@ -1,0 +1,41 @@
+{{- if .Values.logPrinterJob.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "helm-guestbook.fullname" . }}-log-printer-{{ .Release.Revision }}
+  labels:
+    app.kubernetes.io/name: {{ include "helm-guestbook.name" . }}
+    helm.sh/chart: {{ include "helm-guestbook.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation
+spec:
+  ttlSecondsAfterFinished: {{ .Values.logPrinterJob.ttlSecondsAfterFinished }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "helm-guestbook.name" . }}-log-printer
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: log-printer
+          image: busybox
+          command:
+            - sh
+            - -c
+            - |
+              i=1
+              while [ "$i" -le "$LOG_LINE_COUNT" ]; do
+                echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] log line $i of $LOG_LINE_COUNT"
+                i=$((i + 1))
+                [ "$i" -le "$LOG_LINE_COUNT" ] && sleep "$SLEEP_SECONDS"
+              done
+          env:
+            - name: LOG_LINE_COUNT
+              value: {{ .Values.logPrinterJob.logLineCount | quote }}
+            - name: SLEEP_SECONDS
+              value: {{ .Values.logPrinterJob.sleepSeconds | quote }}
+{{- end }}
