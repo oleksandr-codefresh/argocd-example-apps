@@ -51,4 +51,4 @@ logPrinterJob:
   # Seconds to wait between each log line
   sleepSeconds: 0.02
   # How long (seconds) to keep the completed Job before automatic deletion
-  ttlSecondsAfterFinished: 300
+  ttlSecondsAfterFinished: 3000
