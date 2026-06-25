@@ -27,4 +27,4 @@ images:
   - name: vplakydatestregistry.azurecr.io/xeonalex/guesbook-unprivileged
     newTag: "latest"
   - name: xeonalex/guesbook-unprivileged
-    newTag: "v0.2.0"
+    newTag: "v0.4"
